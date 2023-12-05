@@ -12,9 +12,9 @@ namespace galaxy890624
         [Header("移動速度"), Range(0, 10)]
         public float MoveSpeed = 2.0f;
         [Header("左邊界"), Tooltip("這是角色左邊的位置限制")]
-        public float LimitLeft = -4.5f;
+        public float LimitLeft = -9.5f;
         [Header("右邊界"), Tooltip("這是角色右邊的位置限制")]
-        public float LimitRight = 4.5f;
+        public float LimitRight = 9.5f;
 
         Vector3 InitialPosition;
 
