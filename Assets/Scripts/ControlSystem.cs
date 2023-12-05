@@ -1,6 +1,7 @@
 /*using System.Collections;
 using System.Collections.Generic;*/
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace galaxy890624
 {
@@ -15,6 +16,7 @@ namespace galaxy890624
         public float LimitLeft = -9.5f;
         [Header("右邊界"), Tooltip("這是角色右邊的位置限制")]
         public float LimitRight = 9.5f;
+        [SerializeField] Text 人物座標 = null;
 
         Vector3 InitialPosition;
 
@@ -45,6 +47,7 @@ namespace galaxy890624
             Position.x = Mathf.Clamp(Position.x, LimitLeft, LimitRight); // 移動範圍
 
             transform.position = Position;
+            
         }
     }
 }
