@@ -47,7 +47,7 @@ namespace galaxy890624
             Position.x = Mathf.Clamp(Position.x, LimitLeft, LimitRight); // 移動範圍
 
             transform.position = Position;
-            
+            人物座標.text = Position.ToString("N3");
         }
     }
 }
