@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using Unity.Mathematics;
+using UnityEditor.UI;
 using UnityEngine;
 
 public class FruitGenerator : MonoBehaviour
@@ -36,6 +37,10 @@ public class FruitGenerator : MonoBehaviour
     {
         Vector3 FruitPosition = transform.position;
         transform.position = FruitPosition;
+        if(transform.position.y <= 14.65)
+        {
+            Destroy(this.gameObject);
+        }
     }
     // 穿透類型的碰撞器被碰了
     private void OnTriggerEnter(Collider other)
