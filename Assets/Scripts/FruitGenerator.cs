@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using Unity.Mathematics;
+using UnityEditor;
 using UnityEditor.UI;
 using UnityEngine;
 
@@ -18,8 +19,22 @@ public class FruitGenerator : MonoBehaviour
     [Header("右邊界"), Tooltip("這是水果出現最右邊的位置限制")]
     public float LimitRight = 9.5f;
     int random = 0;
+
+    int GetScorePow(int x, int y) // y >= 0
+    {
+        if (y == 0)
+        {
+            return 1;
+        }
+        return x * GetScorePow(x, y - 1);
+    }
+
     // Initialization
     private void Awake()
+    {
+        Initialize();
+    }
+    private void Initialize()
     {
         random = UnityEngine.Random.Range(0, 3); // 隨機生成 Lv0 ~ Lv3 的水果
         InitialPosition = new Vector3(UnityEngine.Random.Range(LimitLeft, LimitRight), 7f, 0f);
@@ -36,13 +51,13 @@ public class FruitGenerator : MonoBehaviour
         // 如果玩家碰到我
         if (other.tag == "Player")
         {
-            SaveManager.instance.Score += 1;
-            print("<color=#ff0000>碰到玩家了</color>");
+            SaveManager.instance.Score += GetScorePow(2, random);
             /*
-             * SaveManager.instance.Score += pow(2, random);
              * AudioManager.instance.Play("吃到水果");
              */
             Destroy(this.gameObject); // 刪除自己的遊戲物件
+            Next();
+            print("<color=#0f7fff>我有從<color=#ff00ff>Collider2D</color>進到<color=#ff0000>Next()</color>唷</color>");
         }
     }
     // Game logic
@@ -54,26 +69,16 @@ public class FruitGenerator : MonoBehaviour
     {
         Vector3 FruitPosition = transform.position;
         transform.position = FruitPosition;
-        print($"FruitPosition = <color=#00ff00>{FruitPosition}</color>");
         if(FruitPosition.y <= -7.5)
         {
             Destroy(this.gameObject);
+            Next();
+            print("<color=#0f7fff>我有從<color=#ff00ff>Drop()</color>進到<color=#ff0000>Next()</color>唷</color>");
         }
     }
-    
-
-    // 穿透類型的碰撞器被碰了
-    /*private void OnTriggerEnter(Collider other)
+    private void Next()
     {
-        // 如果玩家碰到我
-        if (other.tag == "Player")
-        {
-            SaveManager.instance.Score += 1;
-            print("<color=#00ff00>碰到玩家了</color>");
-            // SaveManager.instance.Score += pow(2, random);
-            // AudioManager.instance.Play("吃到水果");
-            Destroy(this.gameObject); // 刪除自己的遊戲物件
-        }
-
-    }*/
+        Initialize();
+        print("<color=#0f7fff>我有從<color=#ff00ff>Next()</color>進到<color=#ff0000>Initialize()</color>唷</color>");
+    }
 }
