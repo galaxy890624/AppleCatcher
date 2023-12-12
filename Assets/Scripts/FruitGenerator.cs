@@ -76,6 +76,7 @@ public class FruitGenerator : MonoBehaviour
             print("<color=#0f7fff>我有從<color=#ff00ff>Drop()</color>進到<color=#ff0000>OnDisable()</color>唷</color>");
         }
     }
+    // Decommissioning
     private void OnDisable()
     {
         Initialize();
