@@ -21,7 +21,7 @@ public class FruitGenerator : MonoBehaviour
     private void Awake()
     {
         int random = UnityEngine.Random.Range(0, 3); // 隨機生成 Lv0 ~ Lv3 的水果
-        InitialPosition = new Vector3(UnityEngine.Random.RandomRange(LimitLeft, LimitRight), 7f, 0f);
+        InitialPosition = new Vector3(UnityEngine.Random.Range(LimitLeft, LimitRight), 7f, 0f);
         transform.position = InitialPosition;
         for (int i = 0; i < FruitLevel.Length; i++) // 開始時將所有物件關閉
         {
@@ -37,8 +37,9 @@ public class FruitGenerator : MonoBehaviour
     {
         Vector3 FruitPosition = transform.position;
         transform.position = FruitPosition;
-        if(transform.position.y <= 14.65)
+        if(FruitPosition.y <= -7.5)
         {
+
             Destroy(this.gameObject);
         }
     }
