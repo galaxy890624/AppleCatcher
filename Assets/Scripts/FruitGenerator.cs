@@ -37,7 +37,7 @@ public class FruitGenerator : MonoBehaviour
     {
         Vector3 FruitPosition = transform.position;
         transform.position = FruitPosition;
-        print($"<color=#00ff00>FruitPosition = {FruitPosition}</color>");
+        print($"FruitPosition = <color=#00ff00>{FruitPosition}</color>");
         if(FruitPosition.y <= -7.5)
         {
             Destroy(this.gameObject);
