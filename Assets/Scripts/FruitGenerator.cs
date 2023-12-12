@@ -56,8 +56,8 @@ public class FruitGenerator : MonoBehaviour
              * AudioManager.instance.Play("吃到水果");
              */
             Destroy(this.gameObject); // 刪除自己的遊戲物件
-            Next();
-            print("<color=#0f7fff>我有從<color=#ff00ff>Collider2D</color>進到<color=#ff0000>Next()</color>唷</color>");
+            OnDisable();
+            print("<color=#0f7fff>我有從<color=#ff00ff>Collider2D</color>進到<color=#ff0000>OnDisable()</color>唷</color>");
         }
     }
     // Game logic
@@ -72,18 +72,14 @@ public class FruitGenerator : MonoBehaviour
         if(FruitPosition.y <= -7.5)
         {
             Destroy(this.gameObject);
-            Next();
-            print("<color=#0f7fff>我有從<color=#ff00ff>Drop()</color>進到<color=#ff0000>Next()</color>唷</color>");
+            OnDisable();
+            print("<color=#0f7fff>我有從<color=#ff00ff>Drop()</color>進到<color=#ff0000>OnDisable()</color>唷</color>");
         }
     }
-    private void OnApplicationQuit()
-    {
-        Next();
-    }
-    private void Next()
+    private void OnDisable()
     {
         Initialize();
         Instantiate(this.gameObject); // 生成自己的遊戲物件
-        print("<color=#0f7fff>我有從<color=#ff00ff>Next()</color>進到<color=#ff0000>Initialize()</color>唷</color>");
+        print("<color=#0f7fff>我有從<color=#ff00ff>OnDisable()</color>進到<color=#ff0000>Initialize()</color>唷</color>");
     }
 }
