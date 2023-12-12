@@ -31,7 +31,7 @@ public class FruitGenerator : MonoBehaviour
         FruitLevel[random].SetActive(true); // 把要生成的水果物件打開
     }
     // Physics
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter2D(UnityEngine.Collider2D other)
     {
         // 如果玩家碰到我
         if (other.tag == "Player")
