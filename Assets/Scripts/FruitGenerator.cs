@@ -36,13 +36,13 @@ public class FruitGenerator : MonoBehaviour
     }
     private void Initialize()
     {
-        random = UnityEngine.Random.Range(0, 3); // 隨機生成 Lv0 ~ Lv3 的水果
-        InitialPosition = new Vector3(UnityEngine.Random.Range(LimitLeft, LimitRight), 7f, 0f);
-        transform.position = InitialPosition;
         for (int i = 0; i < FruitLevel.Length; i++) // 開始時將所有物件關閉
         {
             FruitLevel[i].SetActive(false);
         }
+        random = UnityEngine.Random.Range(0, 3); // 隨機生成 Lv0 ~ Lv3 的水果
+        InitialPosition = new Vector3(UnityEngine.Random.Range(LimitLeft, LimitRight), 7f, 0f);
+        transform.position = InitialPosition;
         FruitLevel[random].SetActive(true); // 把要生成的水果物件打開
     }
     // Physics
@@ -76,9 +76,14 @@ public class FruitGenerator : MonoBehaviour
             print("<color=#0f7fff>我有從<color=#ff00ff>Drop()</color>進到<color=#ff0000>Next()</color>唷</color>");
         }
     }
+    private void OnApplicationQuit()
+    {
+        Next();
+    }
     private void Next()
     {
         Initialize();
+        Instantiate(this.gameObject); // 生成自己的遊戲物件
         print("<color=#0f7fff>我有從<color=#ff00ff>Next()</color>進到<color=#ff0000>Initialize()</color>唷</color>");
     }
 }
