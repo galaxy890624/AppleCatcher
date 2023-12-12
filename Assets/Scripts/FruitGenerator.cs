@@ -18,7 +18,7 @@ public class FruitGenerator : MonoBehaviour
     [Header("右邊界"), Tooltip("這是水果出現最右邊的位置限制")]
     public float LimitRight = 9.5f;
     int random = 0;
-
+    // Initialization
     private void Awake()
     {
         random = UnityEngine.Random.Range(0, 3); // 隨機生成 Lv0 ~ Lv3 的水果
@@ -30,6 +30,22 @@ public class FruitGenerator : MonoBehaviour
         }
         FruitLevel[random].SetActive(true); // 把要生成的水果物件打開
     }
+    // Physics
+    private void OnTriggerEnter(Collider other)
+    {
+        // 如果玩家碰到我
+        if (other.tag == "Player")
+        {
+            SaveManager.instance.Score += 1;
+            print("<color=#ff0000>碰到玩家了</color>");
+            /*
+             * SaveManager.instance.Score += pow(2, random);
+             * AudioManager.instance.Play("吃到水果");
+             */
+            Destroy(this.gameObject); // 刪除自己的遊戲物件
+        }
+    }
+    // Game logic
     private void Update()
     {
         Drop();
@@ -44,20 +60,7 @@ public class FruitGenerator : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
-    private void OnTriggerEnter(Collider other)
-    {
-        // 如果玩家碰到我
-        if (other.tag == "Player")
-        {
-            SaveManager.instance.Score += 1;
-            print("<color=#00ff00>碰到玩家了</color>");
-            /*
-             * SaveManager.instance.Score += pow(2, random);
-             * AudioManager.instance.Play("吃到水果");
-             */
-            Destroy(this.gameObject); // 刪除自己的遊戲物件
-        }
-    }
+    
 
     // 穿透類型的碰撞器被碰了
     /*private void OnTriggerEnter(Collider other)
