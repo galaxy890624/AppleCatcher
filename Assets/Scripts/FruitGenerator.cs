@@ -21,7 +21,7 @@ public class FruitGenerator : MonoBehaviour
     public float LimitRight = 9.5f;
     int random = 0;
 
-    int GetScorePow(int x, int y) // y >= 0
+    int GetScorePow(int x, int y) // 計算pow(int x, int y) && y >= 0
     {
         if (y == 0)
         {
@@ -44,8 +44,6 @@ public class FruitGenerator : MonoBehaviour
             print("<color=#0f7fff>我有<color=#ff00ff>關閉物件</color>唷</color>");
         }
         Instantiate(FruitLevel[random], new Vector3(UnityEngine.Random.Range(LimitLeft, LimitRight), 7f, 0f), Quaternion.identity);
-        //InitialPosition = new Vector3(UnityEngine.Random.Range(LimitLeft, LimitRight), 7f, 0f);
-        //transform.position = InitialPosition;
         FruitLevel[random].SetActive(true); // 把要生成的水果物件打開
         print("<color=#0f7fff>我有<color=#ff00ff>打開物件</color>唷</color>");
     }
@@ -60,7 +58,6 @@ public class FruitGenerator : MonoBehaviour
              * AudioManager.instance.Play("吃到水果");
              */
             Destroy(this.gameObject); // 刪除自己的遊戲物件
-            //OnDisable();
             print("<color=#0f7fff>我有從<color=#ff00ff>Collider2D</color>進到<color=#ff0000>OnDisable()</color>唷</color>");
         }
     }
@@ -77,21 +74,19 @@ public class FruitGenerator : MonoBehaviour
         if (FruitPosition.y <= -7.5)
         {
             Destroy(this.gameObject);
-            //OnDisable();
             print("<color=#0f7fff>我有從<color=#ff00ff>Drop()</color>進到<color=#ff0000>OnDisable()</color>唷</color>");
         }
     }
     // Decommissioning
     private void OnDisable() // 會停止使用所有gameObject
     {
-        /*for (int i = 0; i < FruitLevel.Length; i++) // 開始時將所有物件關閉
-        {
-            FruitLevel[i].SetActive(false);
-        }*/
         Initialize();
-        //Instantiate(this.gameObject); // 生成自己的遊戲物件
         print("<color=#0f7fff>我有從<color=#ff00ff>OnDisable()</color>進到<color=#ff0000>Initialize()</color>唷</color>");
     }
 }
 
+//備用程式
 //Invoke("Initialize", 2); // 等待2秒後, 進入Initialize
+//Instantiate(this.gameObject); // 生成自己的遊戲物件
+//InitialPosition = new Vector3(UnityEngine.Random.Range(LimitLeft, LimitRight), 7f, 0f);
+//transform.position = InitialPosition;
