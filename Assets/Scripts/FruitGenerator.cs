@@ -57,7 +57,7 @@ public class FruitGenerator : MonoBehaviour
             /*
              * AudioManager.instance.Play("吃到水果");
              */
-            Destroy(this.gameObject); // 刪除自己的遊戲物件
+            this.gameObject.SetActive(false); // 刪除自己的遊戲物件
             print("<color=#0f7fff>我有從<color=#ff00ff>Collider2D</color>進到<color=#ff0000>OnDisable()</color>唷</color>");
         }
     }
@@ -73,7 +73,7 @@ public class FruitGenerator : MonoBehaviour
         transform.position = FruitPosition;
         if (FruitPosition.y <= -7.5)
         {
-            Destroy(this.gameObject);
+            this.gameObject.SetActive(false);
             print("<color=#0f7fff>我有從<color=#ff00ff>Drop()</color>進到<color=#ff0000>OnDisable()</color>唷</color>");
         }
     }
