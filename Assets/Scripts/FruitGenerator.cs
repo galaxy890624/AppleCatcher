@@ -30,7 +30,7 @@ public class FruitGenerator : MonoBehaviour
     }
 
     // Initialization
-    private void Awake()
+    private void OnEnable()
     {
         Initialize();
     }
