@@ -31,9 +31,9 @@ public class FruitGenerator : MonoBehaviour
     }
 
     // Initialization
-    private void OnEnable()
+    private void OnEnable() // 開始使用所有gameObject
     {
-        Invoke("Initialize", 2); // 等待2秒後, 進入Initialize
+        Initialize();
     }
     private void Initialize()
     {
@@ -41,11 +41,13 @@ public class FruitGenerator : MonoBehaviour
         for (int i = 0; i < FruitLevel.Length; i++) // 開始時將所有物件關閉
         {
             FruitLevel[i].SetActive(false);
+            print("<color=#0f7fff>我有<color=#ff00ff>關閉物件</color>唷</color>");
         }
         Instantiate(FruitLevel[random], new Vector3(UnityEngine.Random.Range(LimitLeft, LimitRight), 7f, 0f), Quaternion.identity);
         //InitialPosition = new Vector3(UnityEngine.Random.Range(LimitLeft, LimitRight), 7f, 0f);
         //transform.position = InitialPosition;
         FruitLevel[random].SetActive(true); // 把要生成的水果物件打開
+        print("<color=#0f7fff>我有<color=#ff00ff>打開物件</color>唷</color>");
     }
     // Physics
     private void OnTriggerEnter2D(UnityEngine.Collider2D other)
@@ -58,7 +60,7 @@ public class FruitGenerator : MonoBehaviour
              * AudioManager.instance.Play("吃到水果");
              */
             Destroy(this.gameObject); // 刪除自己的遊戲物件
-            OnDisable();
+            //OnDisable();
             print("<color=#0f7fff>我有從<color=#ff00ff>Collider2D</color>進到<color=#ff0000>OnDisable()</color>唷</color>");
         }
     }
@@ -69,17 +71,18 @@ public class FruitGenerator : MonoBehaviour
     }
     private void Drop()
     {
+        FruitLevel[random].SetActive(true); // 把要生成的水果物件打開
         Vector3 FruitPosition = transform.position;
         transform.position = FruitPosition;
-        if(FruitPosition.y <= -7.5)
+        if (FruitPosition.y <= -7.5)
         {
             Destroy(this.gameObject);
-            OnDisable();
+            //OnDisable();
             print("<color=#0f7fff>我有從<color=#ff00ff>Drop()</color>進到<color=#ff0000>OnDisable()</color>唷</color>");
         }
     }
     // Decommissioning
-    private void OnDisable()
+    private void OnDisable() // 會停止使用所有gameObject
     {
         /*for (int i = 0; i < FruitLevel.Length; i++) // 開始時將所有物件關閉
         {
@@ -90,3 +93,5 @@ public class FruitGenerator : MonoBehaviour
         print("<color=#0f7fff>我有從<color=#ff00ff>OnDisable()</color>進到<color=#ff0000>Initialize()</color>唷</color>");
     }
 }
+
+//Invoke("Initialize", 2); // 等待2秒後, 進入Initialize
