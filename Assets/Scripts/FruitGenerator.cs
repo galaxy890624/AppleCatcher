@@ -6,6 +6,7 @@ using Unity.Mathematics;
 using UnityEditor;
 using UnityEditor.UI;
 using UnityEngine;
+using static UnityEngine.GraphicsBuffer;
 
 public class FruitGenerator : MonoBehaviour
 {
@@ -32,7 +33,7 @@ public class FruitGenerator : MonoBehaviour
     // Initialization
     private void OnEnable()
     {
-        Initialize();
+        Invoke("Initialize", 2); // 等待2秒後, 進入Initialize
     }
     private void Initialize()
     {
@@ -41,8 +42,9 @@ public class FruitGenerator : MonoBehaviour
         {
             FruitLevel[i].SetActive(false);
         }
-        InitialPosition = new Vector3(UnityEngine.Random.Range(LimitLeft, LimitRight), 7f, 0f);
-        transform.position = InitialPosition;
+        Instantiate(FruitLevel[random], new Vector3(UnityEngine.Random.Range(LimitLeft, LimitRight), 7f, 0f), Quaternion.identity);
+        //InitialPosition = new Vector3(UnityEngine.Random.Range(LimitLeft, LimitRight), 7f, 0f);
+        //transform.position = InitialPosition;
         FruitLevel[random].SetActive(true); // 把要生成的水果物件打開
     }
     // Physics
@@ -84,7 +86,7 @@ public class FruitGenerator : MonoBehaviour
             FruitLevel[i].SetActive(false);
         }*/
         Initialize();
-        Instantiate(this.gameObject); // 生成自己的遊戲物件
+        //Instantiate(this.gameObject); // 生成自己的遊戲物件
         print("<color=#0f7fff>我有從<color=#ff00ff>OnDisable()</color>進到<color=#ff0000>Initialize()</color>唷</color>");
     }
 }
