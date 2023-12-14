@@ -43,7 +43,8 @@ public class FruitGenerator : MonoBehaviour
             FruitLevel[i].SetActive(false);
             print("<color=#0f7fff>我有<color=#ff00ff>關閉物件</color>唷</color>");
         }
-        Instantiate(FruitLevel[random], new Vector3(UnityEngine.Random.Range(LimitLeft, LimitRight), 7f, 0f), Quaternion.identity);
+        InitialPosition = new Vector3(UnityEngine.Random.Range(LimitLeft, LimitRight), 7f, 0f);
+        transform.position = InitialPosition;
         FruitLevel[random].SetActive(true); // 把要生成的水果物件打開
         print("<color=#0f7fff>我有<color=#ff00ff>打開物件</color>唷</color>");
     }
@@ -90,3 +91,4 @@ public class FruitGenerator : MonoBehaviour
 //Instantiate(this.gameObject); // 生成自己的遊戲物件
 //InitialPosition = new Vector3(UnityEngine.Random.Range(LimitLeft, LimitRight), 7f, 0f);
 //transform.position = InitialPosition;
+//Instantiate(FruitLevel[random], new Vector3(UnityEngine.Random.Range(LimitLeft, LimitRight), 7f, 0f), Quaternion.identity);
