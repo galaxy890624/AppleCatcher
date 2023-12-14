@@ -19,7 +19,7 @@ public class FruitGenerator : MonoBehaviour
     public float LimitLeft = -9.5f;
     [Header("右邊界"), Tooltip("這是水果出現最右邊的位置限制")]
     public float LimitRight = 9.5f;
-    int random = 0;
+    int random = 0; // global
 
     int GetScorePow(int x, int y) // 計算pow(int x, int y) && y >= 0
     {
