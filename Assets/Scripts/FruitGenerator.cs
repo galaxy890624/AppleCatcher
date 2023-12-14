@@ -3,11 +3,11 @@ using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using Unity.Mathematics;
+using Unity.VisualScripting;
 using UnityEditor;
 using UnityEditor.UI;
 using UnityEngine;
 using static UnityEngine.GraphicsBuffer;
-
 public class FruitGenerator : MonoBehaviour
 {
     [Header("水果等級")] // 必須由 Lv 0 排到 Lv 7
@@ -20,7 +20,7 @@ public class FruitGenerator : MonoBehaviour
     [Header("右邊界"), Tooltip("這是水果出現最右邊的位置限制")]
     public float LimitRight = 9.5f;
     int random = 0; // global
-
+    float Delay = 0f;
     int GetScorePow(int x, int y) // 計算pow(int x, int y) && y >= 0
     {
         if (y == 0)
@@ -29,7 +29,6 @@ public class FruitGenerator : MonoBehaviour
         }
         return x * GetScorePow(x, y - 1);
     }
-
     // Initialization
     private void OnEnable() // 開始使用所有gameObject
     {
@@ -85,7 +84,6 @@ public class FruitGenerator : MonoBehaviour
         print("<color=#0f7fff>我有從<color=#ff00ff>OnDisable()</color>進到<color=#ff0000>Initialize()</color>唷</color>");
     }
 }
-
 //備用程式
 //Invoke("Initialize", 2); // 等待2秒後, 進入Initialize
 //Instantiate(this.gameObject); // 生成自己的遊戲物件

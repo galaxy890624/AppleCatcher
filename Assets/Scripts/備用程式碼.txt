@@ -1,0 +1,54 @@
+// Initialization
+private void OnEnable() // 開始使用所有gameObject
+{
+    Initialize();
+}
+private void Initialize()
+{
+    random = UnityEngine.Random.Range(0, 3); // 隨機生成 Lv0 ~ Lv3 的水果
+    for (int i = 0; i < FruitLevel.Length; i++) // 開始時將所有物件關閉
+    {
+        FruitLevel[i].SetActive(false);
+        print("<color=#0f7fff>我有<color=#ff00ff>關閉物件</color>唷</color>");
+    }
+    InitialPosition = new Vector3(UnityEngine.Random.Range(LimitLeft, LimitRight), 7f, 0f);
+    transform.position = InitialPosition;
+    FruitLevel[random].SetActive(true); // 把要生成的水果物件打開
+    print("<color=#0f7fff>我有<color=#ff00ff>打開物件</color>唷</color>");
+}
+// Physics
+private void OnTriggerEnter2D(UnityEngine.Collider2D other)
+{
+    // 如果玩家碰到我
+    if (other.tag == "Player")
+    {
+        SaveManager.instance.Score += GetScorePow(2, random);
+        /*
+         * AudioManager.instance.Play("吃到水果");
+         */
+        this.gameObject.SetActive(false); // 刪除自己的遊戲物件
+        print("<color=#0f7fff>我有從<color=#ff00ff>Collider2D</color>進到<color=#ff0000>OnDisable()</color>唷</color>");
+    }
+}
+// Game logic
+private void Update()
+{
+    Drop();
+}
+private void Drop()
+{
+    FruitLevel[random].SetActive(true); // 把要生成的水果物件打開
+    Vector3 FruitPosition = transform.position;
+    transform.position = FruitPosition;
+    if (FruitPosition.y <= -7.5)
+    {
+        this.gameObject.SetActive(false);
+        print("<color=#0f7fff>我有從<color=#ff00ff>Drop()</color>進到<color=#ff0000>OnDisable()</color>唷</color>");
+    }
+}
+// Decommissioning
+private void OnDisable() // 會停止使用所有gameObject
+{
+    Initialize();
+    print("<color=#0f7fff>我有從<color=#ff00ff>OnDisable()</color>進到<color=#ff0000>Initialize()</color>唷</color>");
+}
