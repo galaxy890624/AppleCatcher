@@ -48,7 +48,7 @@ public class FruitGenerator : MonoBehaviour
         print("<color=#0f7fff>我有<color=#ff00ff>打開物件</color>唷</color>");
     }
     // Physics
-    private void OnTriggerEnter2D(UnityEngine.Collider2D other)
+    private void OnTriggerEnter2D(UnityEngine.Collider2D other) // 單例設計SS
     {
         // 如果玩家碰到我
         if (other.tag == "Player")
@@ -58,6 +58,11 @@ public class FruitGenerator : MonoBehaviour
              * AudioManager.instance.Play("吃到水果");
              */
             this.gameObject.SetActive(false); // 刪除自己的遊戲物件
+            print("<color=#0f7fff>我有從<color=#ff00ff>Collider2D</color>進到<color=#ff0000>OnDisable()</color>唷</color>");
+        }
+        else if (other.tag == "Ground")
+        {
+            this.gameObject.SetActive(false);
             print("<color=#0f7fff>我有從<color=#ff00ff>Collider2D</color>進到<color=#ff0000>OnDisable()</color>唷</color>");
         }
     }
@@ -71,11 +76,6 @@ public class FruitGenerator : MonoBehaviour
         FruitLevel[random].SetActive(true); // 把要生成的水果物件打開
         Vector3 FruitPosition = transform.position;
         transform.position = FruitPosition;
-        if (FruitPosition.y <= -7.5)
-        {
-            this.gameObject.SetActive(false);
-            print("<color=#0f7fff>我有從<color=#ff00ff>Drop()</color>進到<color=#ff0000>OnDisable()</color>唷</color>");
-        }
     }
     // Decommissioning
     private void OnDisable() // 會停止使用所有gameObject
