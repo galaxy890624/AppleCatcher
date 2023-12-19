@@ -29,6 +29,23 @@ public class FruitGenerator : MonoBehaviour
         }
         return x * GetScorePow(x, y - 1);
     }
+    #region 單例設計模式
+    public static FruitGenerator instance
+    {
+        get // 當有人讀取我
+        {
+            // 如果我不存在於記憶體中
+            if (_instance == null)
+            {
+                // 那麼我就自己創造自己
+                _instance = new FruitGenerator();
+            }
+            // 回傳給對方
+            return _instance;
+        }
+    }
+    static FruitGenerator _instance = null;
+    #endregion
     // Initialization
     private void OnEnable() // 開始使用所有gameObject
     {
