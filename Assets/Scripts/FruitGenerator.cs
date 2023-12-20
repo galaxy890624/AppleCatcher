@@ -82,6 +82,7 @@ public class FruitGenerator : MonoBehaviour
             this.gameObject.SetActive(false);
             print("<color=#0f7fff>我有從<color=#ff00ff>Collider2D</color>進到<color=#ff0000>OnDisable()</color>唷</color>");
         }
+        // FruitGenerator.instance.Initialize();
     }
     // Game logic
     private void Update()
