@@ -65,7 +65,7 @@ public class FruitGenerator : MonoBehaviour
         print("<color=#0f7fff>我有<color=#ff00ff>打開物件</color>唷</color>");
     }
     // Physics
-    private void OnTriggerEnter2D(UnityEngine.Collider2D other) // 單例設計SS
+    private void OnTriggerEnter2D(UnityEngine.Collider2D other) // 單例設計SpawnSystem
     {
         // 如果玩家碰到我
         if (other.tag == "Player")
@@ -75,6 +75,7 @@ public class FruitGenerator : MonoBehaviour
              * AudioManager.instance.Play("吃到水果");
              */
             this.gameObject.SetActive(false); // 刪除自己的遊戲物件
+            FruitGenerator.instance.Initialize();
             print("<color=#0f7fff>我有從<color=#ff00ff>Collider2D</color>進到<color=#ff0000>OnDisable()</color>唷</color>");
         }
         else if (other.tag == "Ground")
