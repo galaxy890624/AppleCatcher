@@ -30,7 +30,7 @@ public class FruitGenerator : MonoBehaviour
         return x * GetScorePow(x, y - 1);
     }
     #region 單例設計模式
-    public static FruitGenerator instance
+    public static FruitGenerator instance // 單例設計SpawnSystem
     {
         get // 當有人讀取我
         {
@@ -65,7 +65,7 @@ public class FruitGenerator : MonoBehaviour
         print("<color=#0f7fff>我有<color=#ff00ff>打開物件</color>唷</color>");
     }
     // Physics
-    private void OnTriggerEnter2D(UnityEngine.Collider2D other) // 單例設計SpawnSystem
+    private void OnTriggerEnter2D(UnityEngine.Collider2D other)
     {
         // 如果玩家碰到我
         if (other.tag == "Player")
@@ -75,7 +75,6 @@ public class FruitGenerator : MonoBehaviour
              * AudioManager.instance.Play("吃到水果");
              */
             this.gameObject.SetActive(false); // 刪除自己的遊戲物件
-            FruitGenerator.instance.Initialize();
             print("<color=#0f7fff>我有從<color=#ff00ff>Collider2D</color>進到<color=#ff0000>OnDisable()</color>唷</color>");
         }
         else if (other.tag == "Ground")
@@ -99,13 +98,17 @@ public class FruitGenerator : MonoBehaviour
     // Decommissioning
     private void OnDisable() // 會停止使用所有gameObject
     {
-        Initialize();
+        FruitGenerator.instance.Initialize();
         print("<color=#0f7fff>我有從<color=#ff00ff>OnDisable()</color>進到<color=#ff0000>Initialize()</color>唷</color>");
     }
+
 }
 //備用程式
 //Invoke("Initialize", 2); // 等待2秒後, 進入Initialize
+
 //Instantiate(this.gameObject); // 生成自己的遊戲物件
+
 //InitialPosition = new Vector3(UnityEngine.Random.Range(LimitLeft, LimitRight), 7f, 0f);
 //transform.position = InitialPosition;
+
 //Instantiate(FruitLevel[random], new Vector3(UnityEngine.Random.Range(LimitLeft, LimitRight), 7f, 0f), Quaternion.identity);
