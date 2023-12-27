@@ -138,7 +138,7 @@ GameObject:
   - component: {fileID: 58849109}
   - component: {fileID: 58849108}
   m_Layer: 0
-  m_Name: "\u4EBA\u7269"
+  m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1386,7 +1386,7 @@ GameObject:
   - component: {fileID: 749572552}
   - component: {fileID: 749572551}
   m_Layer: 0
-  m_Name: "\u73BB\u7483"
+  m_Name: Stage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1706,7 +1706,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8033721371279625983, guid: 2a128114f766b7148b1d99ae069fc382, type: 3}
       propertyPath: m_Name
-      value: "\u70B8\u5F48"
+      value: Bomb
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
