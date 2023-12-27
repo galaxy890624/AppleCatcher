@@ -1765,9 +1765,41 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2432731656491257255, guid: 44bc8a083801feb47bdee9039b702031, type: 3}
+      propertyPath: m_Name
+      value: Pineapple
+      objectReference: {fileID: 0}
+    - target: {fileID: 3488210853794361783, guid: 44bc8a083801feb47bdee9039b702031, type: 3}
+      propertyPath: m_Name
+      value: Strawberry
+      objectReference: {fileID: 0}
+    - target: {fileID: 4881874036808036912, guid: 44bc8a083801feb47bdee9039b702031, type: 3}
+      propertyPath: m_Name
+      value: Cherries
+      objectReference: {fileID: 0}
+    - target: {fileID: 4920408174038030793, guid: 44bc8a083801feb47bdee9039b702031, type: 3}
+      propertyPath: m_Name
+      value: Orange
+      objectReference: {fileID: 0}
+    - target: {fileID: 6541888608962103311, guid: 44bc8a083801feb47bdee9039b702031, type: 3}
+      propertyPath: m_Name
+      value: Bananas
+      objectReference: {fileID: 0}
+    - target: {fileID: 7641360068433172037, guid: 44bc8a083801feb47bdee9039b702031, type: 3}
+      propertyPath: m_Name
+      value: Kiwi
+      objectReference: {fileID: 0}
+    - target: {fileID: 7948162770672137174, guid: 44bc8a083801feb47bdee9039b702031, type: 3}
+      propertyPath: m_Name
+      value: Melon
+      objectReference: {fileID: 0}
     - target: {fileID: 8161667388631026779, guid: 44bc8a083801feb47bdee9039b702031, type: 3}
       propertyPath: m_Name
       value: FruitLevel
+      objectReference: {fileID: 0}
+    - target: {fileID: 9154277817219656570, guid: 44bc8a083801feb47bdee9039b702031, type: 3}
+      propertyPath: m_Name
+      value: Apple
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
