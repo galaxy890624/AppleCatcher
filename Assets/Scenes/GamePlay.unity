@@ -1692,6 +1692,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1813713637}
+  - component: {fileID: 1813713638}
   m_Layer: 0
   m_Name: Generator
   m_TagString: Untagged
@@ -1714,3 +1715,29 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1813713638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1813713636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3155cf2bfe9cc4244b4632c2e78c411f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FruitLevel:
+  - {fileID: 2147733348213043614, guid: db87e2adfb7d5554e81faae36d9b7698, type: 3}
+  - {fileID: 5866171036461325506, guid: b5ee969e4a5ce594097ab22d17b545cc, type: 3}
+  - {fileID: 7924750121580867048, guid: e66613d19b9ce6349a76a97d7efdb846, type: 3}
+  - {fileID: 4989019057656385803, guid: e48e54952f9bac746a19548a589635a2, type: 3}
+  - {fileID: 422491870503234752, guid: 5054e2a5402032745b37de4adc7aa1af, type: 3}
+  - {fileID: 6104634668136370181, guid: 45b1b9b0b6a1ae74cb4c341c551f6998, type: 3}
+  - {fileID: 6030425306187109848, guid: eeb4bbf5002bd03459f960303461c2f4, type: 3}
+  - {fileID: 6881425429470151428, guid: 54f595abc6b5814409dfa7b586a6ee43, type: 3}
+  DropSpeed: 2
+  LimitLeft: -9.5
+  LimitRight: 9.5
+  Generator: {fileID: 0}
+  InitialPosition: {fileID: 1813713637}

@@ -95,7 +95,7 @@ public class FruitGenerator : MonoBehaviour
         Vector3 FruitPosition = transform.position;
         transform.position = FruitPosition;
     }
-    // Decommissioning
+    // Decommit
     private void OnDisable() // 會停止使用所有gameObject
     {
         FruitGenerator.instance.Initialize();
