@@ -12,6 +12,7 @@ public class FruitGenerator : MonoBehaviour
     [Header("右邊界"), Tooltip("這是水果出現最右邊的位置限制")]
     public float LimitRight = 9.5f;
     int random = 0;
+    float SpawnTime = 0f;
     // initialize
     private void OnEnable()
     {
@@ -19,12 +20,12 @@ public class FruitGenerator : MonoBehaviour
         for (int i = 0; i < FruitLevel.Length; i++) // 開始時將所有物件關閉
         {
             FruitLevel[i].SetActive(false);
-            print("<color=#0f7fff>我有<color=#ff00ff>關閉物件</color>唷</color>");
+            //print("<color=#0f7fff>我有<color=#ff00ff>關閉物件</color>唷</color>");
         }
         InitialPosition = new Vector3(UnityEngine.Random.Range(LimitLeft, LimitRight), 7f, 0f);
         transform.position = InitialPosition;
         FruitLevel[random].SetActive(true); // 把要生成的水果物件打開
-        print("<color=#0f7fff>我有<color=#ff00ff>打開物件</color>唷</color>");
+        //print("<color=#0f7fff>我有<color=#ff00ff>打開物件</color>唷</color>");
     }
     // Start is called before the first frame update
     private void Start()
@@ -37,17 +38,25 @@ public class FruitGenerator : MonoBehaviour
         if(other.tag == "Player")
         {
             this.gameObject.SetActive(false); // 刪除自己的遊戲物件
-            print("<color=#0f7fff>我有從<color=#ff00ff>Collider2D</color>進到<color=#ff0000>OnDisable()</color>唷</color>");
+            Destroy(this.gameObject);
+            //print("<color=#0f7fff>我有從<color=#ff00ff>Collider2D</color>進到<color=#ff0000>OnDisable()</color>唷</color>");
         }
         else if (other.tag == "Ground")
         {
             this.gameObject.SetActive(false);
-            print("<color=#0f7fff>我有從<color=#ff00ff>Collider2D</color>進到<color=#ff0000>OnDisable()</color>唷</color>");
+            Destroy(this.gameObject);
+            //print("<color=#0f7fff>我有從<color=#ff00ff>Collider2D</color>進到<color=#ff0000>OnDisable()</color>唷</color>");
         }
     }
     // Update is called once per frame
     private void Update()
     {
+        if(Time.time > SpawnTime)
+        {
+            print($"<color=#ff00ff>SpawnTime = <color=#00ff00>{SpawnTime}</color>,我要生成水果囉</color>");
+            // Instantiate(this.gameObject, new Vector3(UnityEngine.Random.Range(LimitLeft, LimitRight), 7f, 0f), Quaternion.identity);
+            SpawnTime += 1.0f;
+        }
         
     }
     // decommit
