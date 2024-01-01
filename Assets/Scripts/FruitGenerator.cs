@@ -11,8 +11,10 @@ public class FruitGenerator : MonoBehaviour
     public float LimitLeft = -9.5f;
     [Header("右邊界"), Tooltip("這是水果出現最右邊的位置限制")]
     public float LimitRight = 9.5f;
+    public 
     int random = 0;
     float SpawnTime = 0f;
+    //float DelayTime = 1f;
     // initialize
     private void OnEnable()
     {
@@ -55,7 +57,7 @@ public class FruitGenerator : MonoBehaviour
         {
             print($"<color=#ff00ff>SpawnTime = <color=#00ff00>{SpawnTime}</color>,我要生成水果囉</color>");
             // Instantiate(this.gameObject, new Vector3(UnityEngine.Random.Range(LimitLeft, LimitRight), 7f, 0f), Quaternion.identity);
-            SpawnTime += 1.0f;
+            SpawnTime += 1f; // Delay 1秒
         }
         
     }
