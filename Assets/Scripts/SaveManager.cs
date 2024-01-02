@@ -57,4 +57,25 @@ public class SaveManager
             PlayerPrefs.SetInt("HighScore", value);
         }
     }
+    /// <summary>蘋果數量</summary>
+    public float AppleQuantity
+    {
+        get // 當有人讀取AppleQuantity
+        {
+            return _AppleQuantity;
+        }
+        set // 當有人寫入AppleQuantity
+        {
+            // 限制範圍在0~最大之間
+            // _AppleQuantity = Mathf.Clamp(value, 0f, maxAppleQuantity);
+            // 當人修改體力時通知所有訂閱我的用戶
+            if (AppleQuantity變化事件 != null)
+            {
+                AppleQuantity變化事件.Invoke();
+            }
+        }
+    }
+    float _AppleQuantity = 10f;
+    //public float maxAppleQuantity = 10f;
+    public Action AppleQuantity變化事件 = null;
 }
