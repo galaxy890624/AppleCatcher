@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class FruitGenerator : MonoBehaviour
 {
-    [Header("¤ôªGµ¥¯Å")] // ¥²¶·¥Ñ Lv 0 ±Æ¨ì Lv 7
+    [Header("æ°´æœç­‰ç´š")] // å¿…é ˆç”± Lv 0 æ’åˆ° Lv 7
     public GameObject[] FruitLevel = null;
     // Vector3 InitialPosition;
-    [Header("¥ªÃä¬É"), Tooltip("³o¬O¤ôªG¥X²{³Ì¥ªÃäªº¦ì¸m­­¨î")]
+    [Header("å·¦é‚Šç•Œ"), Tooltip("é€™æ˜¯æ°´æœå‡ºç¾æœ€å·¦é‚Šçš„ä½ç½®é™åˆ¶")]
     public float LimitLeft = -9.5f;
-    [Header("¥kÃä¬É"), Tooltip("³o¬O¤ôªG¥X²{³Ì¥kÃäªº¦ì¸m­­¨î")]
+    [Header("å³é‚Šç•Œ"), Tooltip("é€™æ˜¯æ°´æœå‡ºç¾æœ€å³é‚Šçš„ä½ç½®é™åˆ¶")]
     public float LimitRight = 9.5f;
     public Transform Generator;
     int random = 0;
@@ -22,31 +22,31 @@ public class FruitGenerator : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
-
+        
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Player")
+        if(other.tag == "Player")
         {
             Destroy(Generator);
         }
         else if (other.tag == "Ground")
         {
-
+            
         }
     }
     // Update is called once per frame
     private void Update()
     {
-        if (Time.time > SpawnTime)
+        if(Time.time > SpawnTime)
         {
-            random = UnityEngine.Random.Range(0, 3); // ÀH¾÷¥Í¦¨ Lv0 ~ Lv3 ªº¤ôªG
+            random = UnityEngine.Random.Range(0, 3); // éš¨æ©Ÿç”Ÿæˆ Lv0 ~ Lv3 çš„æ°´æœ
             Generator.position = new Vector3(UnityEngine.Random.Range(LimitLeft, LimitRight), 7f, 0f);
             Instantiate(FruitLevel[random], Generator.position, Quaternion.identity);
-            SpawnTime += 1f; // Delay 1¬í
+            SpawnTime += 1f; // Delay 1ç§’
         }
-
+        
     }
     // decommit
     private void OnDisable()
