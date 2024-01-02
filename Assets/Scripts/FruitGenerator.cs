@@ -67,3 +67,51 @@ public class FruitGenerator : MonoBehaviour
         OnEnable();
     }
 }
+
+/*
+ * using UnityEngine;
+using System.Collections;
+
+public class FruitGenerator : MonoBehaviour
+{
+    public GameObject[] fruitPrefabs; // 存放水果Prefab的陣列
+    public float spawnInterval = 2f;  // 生成水果的時間間隔
+    public float spawnRangeX = 9.5f;    // 生成水果的X軸範圍
+
+    void Start()
+    {
+        // 啟動協程，用於定期生成水果
+        StartCoroutine(SpawnFruits());
+    }
+
+    IEnumerator SpawnFruits()
+    {
+        while (true)
+        {
+            // 隨機選擇一個水果Prefab
+            GameObject randomFruit = fruitPrefabs[Random.Range(0, fruitPrefabs.Length)];
+
+            // 隨機生成X軸位置
+            float spawnPosX = Random.Range(-spawnRangeX, spawnRangeX);
+
+            // 生成水果
+            Instantiate(randomFruit, new Vector3(spawnPosX, transform.position.y, 0), Quaternion.identity);
+
+            // 等待指定的時間間隔再生成下一個水果
+            yield return new WaitForSeconds(spawnInterval);
+        }
+    }
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        // 如果碰到玩家或地面，則摧毀水果
+        if (other.CompareTag("Player"))
+        {
+            Destroy(other.gameObject);
+        }
+        else if (other.CompareTag("Ground"))
+        {
+            Destroy(other.gameObject);
+        }
+    }
+}
+*/
