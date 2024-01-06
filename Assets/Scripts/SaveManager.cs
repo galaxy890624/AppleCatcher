@@ -73,7 +73,6 @@ public class SaveManager
             }
         }
     }
-    float _AppleQuantity = 0; // test
-    //public float maxAppleQuantity = 10f;
+    float _AppleQuantity = 0f;
     public Action AppleQuantity變化事件 = null;
 }
