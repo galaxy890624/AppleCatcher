@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
+using Unity.Mathematics;
 public class Tools : MonoBehaviour
 {
     [MenuItem("工具/清除所有資料")]
@@ -16,5 +17,15 @@ public class Tools : MonoBehaviour
     static public void 分數歸零()
     {
         SaveManager.instance.Score = 0;
+    }
+    [MenuItem("工具/蘋果數量歸零")]
+    static public void 蘋果數量歸零()
+    {
+        SaveManager.instance.AppleQuantity = 0;
+    }
+    [MenuItem("工具/蘋果+1M")]
+    static public void 蘋果增加1M()
+    {
+        SaveManager.instance.AppleQuantity += Mathf.Pow(10f, 6f);
     }
 }
