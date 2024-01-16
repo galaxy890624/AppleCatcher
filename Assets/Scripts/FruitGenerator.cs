@@ -15,29 +15,8 @@ public class FruitGenerator : MonoBehaviour
     public Transform Generator;
     int random = 0;
     float SpawnTime = 0f;
-    // initialize
-    private void OnEnable()
-    {
 
-    }
-    // Start is called before the first frame update
-    private void Start()
-    {
-
-    }
-
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.tag == "Player")
-        {
-            Destroy(Generator);
-        }
-        else if (other.tag == "Ground")
-        {
-
-        }
-    }
-    // Update is called once per frame
+    // Game logic
     private void Update()
     {
         if (Time.time > SpawnTime)
@@ -48,10 +27,5 @@ public class FruitGenerator : MonoBehaviour
             SpawnTime += 1f; // Delay 1¬í
         }
 
-    }
-    // decommit
-    private void OnDisable()
-    {
-        OnEnable();
     }
 }
