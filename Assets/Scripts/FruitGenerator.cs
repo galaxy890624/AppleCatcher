@@ -12,6 +12,7 @@ public class FruitGenerator : MonoBehaviour
     public float LimitLeft = -9.5f;
     [Header("右邊界"), Tooltip("這是水果出現最右邊的位置限制")]
     public float LimitRight = 9.5f;
+    [Header("生成水果的位置")]
     public Transform Generator;
     int random = 0;
     float SpawnTime = 0f;
