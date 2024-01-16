@@ -4,15 +4,6 @@ using UnityEngine;
 
 public class FruitCatcher : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    // Physics
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
