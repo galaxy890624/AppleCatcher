@@ -28,4 +28,9 @@ public class Menu : MonoBehaviour
     {
         Debug.Log("Â÷¶}");
     }
+    public void ªð¦^Menu()
+    {
+        Debug.Log("ªð¦^Menu");
+        SceneManager.LoadScene("Menu");
+    }
 }

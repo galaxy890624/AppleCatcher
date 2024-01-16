@@ -15,7 +15,7 @@ public class FruitGenerator : MonoBehaviour
     [Header("生成水果的位置")]
     public Transform Generator;
     int random = 0;
-    float SpawnTime = 0f;
+    float SpawnTime = 0f; // 生成水果的計時器
 
     // Game logic
     private void Update()
@@ -27,6 +27,5 @@ public class FruitGenerator : MonoBehaviour
             Instantiate(FruitLevel[random], Generator.position, Quaternion.identity);
             SpawnTime += 1f; // Delay 1秒
         }
-
     }
 }
