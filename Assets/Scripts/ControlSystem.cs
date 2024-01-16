@@ -19,7 +19,8 @@ namespace galaxy890624
         [SerializeField] Text 人物座標 = null;
 
         Vector3 InitialPosition;
-
+        
+        // Initialize
         private void Awake() // 遊戲開始時會執行1次
         {
             // 設定該角色的初始座標
@@ -28,6 +29,7 @@ namespace galaxy890624
 
         }
 
+        // Game logic
         private void Update()
         // 更新事件: 約1秒後執行 60 FPS
         // 可以偵測玩家的輸入行為: 鍵盤, 滑鼠, 搖桿, 觸控, XR控制器
