@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class AppleQuantity : MonoBehaviour
+public class FruitQuantity : MonoBehaviour
 {
     void Start()
     {

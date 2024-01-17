@@ -5,10 +5,14 @@ using UnityEngine;
 public class FruitCatcher : MonoBehaviour
 {
     // Physics
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        print($"<color=#ff00ff>碰到的物件: <color=#00ff00>{collision.gameObject.name}</color></color>");
-        if (collision.gameObject.name == "Player" )
+        if (collision.tag == "Player")
+        {
+            print($"<color=ff00ff>我有碰到<color=00ff00>{collision.tag}</color>唷!</color>");
+            Destroy(gameObject);
+        }
+        else if (collision.tag == "Ground")
         {
             Destroy(gameObject);
         }
