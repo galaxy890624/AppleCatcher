@@ -62,17 +62,16 @@ public class SaveManager
     {
         get // 當有人讀取AppleQuantity
         {
-            return _AppleQuantity;
+            return PlayerPrefs.GetFloat("AppleQuantity", 0);
         }
         set // 當有人寫入AppleQuantity
         {
-            _AppleQuantity = value;
+            PlayerPrefs.SetFloat("AppleQuantity", value);
             if (AppleQuantity變化事件 != null)
             {
                 AppleQuantity變化事件.Invoke();
             }
         }
     }
-    float _AppleQuantity = 0f;
     public Action AppleQuantity變化事件 = null;
 }
