@@ -23,7 +23,7 @@ public class SaveManager
     static SaveManager _instance = null;
     #endregion
 
-    /// <summary> 分數 </summary>
+    /// <summary> 分數(每次重開歸零) </summary>
     public int Score
     {
         get
@@ -57,6 +57,25 @@ public class SaveManager
             PlayerPrefs.SetInt("HighScore", value);
         }
     }
+
+    /// <summary>水果數量</summary>
+    public float FruitQuantity
+    {
+        get // 當有人讀取FruitQuantity
+        {
+            return PlayerPrefs.GetFloat("FruitQuantity", 0);
+        }
+        set // 當有人寫入FruitQuantity
+        {
+            PlayerPrefs.SetFloat("FruitQuantity", value);
+            if (FruitQuantity變化事件 != null)
+            {
+                FruitQuantity變化事件.Invoke();
+            }
+        }
+    }
+    public Action FruitQuantity變化事件 = null;
+
     /// <summary>蘋果數量</summary>
     public float AppleQuantity
     {
