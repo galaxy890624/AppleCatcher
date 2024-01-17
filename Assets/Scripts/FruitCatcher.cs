@@ -9,7 +9,7 @@ public class FruitCatcher : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            print($"<color=ff00ff>我有碰到<color=00ff00>{collision.tag}</color>唷!</color>");
+            print($"<color=#ff00ff>我有碰到<color=#00ff00>{collision.tag}</color>唷!</color>");
             Destroy(gameObject);
         }
         else if (collision.tag == "Ground")
