@@ -10,6 +10,7 @@ public class FruitCatcher : MonoBehaviour
         if (collision.tag == "Player")
         {
             print($"<color=#ff00ff>我接到<color=#00ff00>{gameObject.name}</color>了唷!</color>");
+            SaveManager.instance.Score += 1;
             Destroy(gameObject);
         }
         else if (collision.tag == "Ground")
