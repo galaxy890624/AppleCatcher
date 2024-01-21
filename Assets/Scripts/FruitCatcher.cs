@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class FruitCatcher : MonoBehaviour
 {
+    public GameObject[] FruitLevel = null;
     // Physics
     private void OnTriggerEnter2D(Collider2D collision)
     {
