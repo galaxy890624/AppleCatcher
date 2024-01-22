@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEditor;
 public class FruitCatcher : MonoBehaviour
 {
     public GameObject[] FruitLevel = null;
@@ -11,7 +11,8 @@ public class FruitCatcher : MonoBehaviour
         if (collision.tag == "Player")
         {
             print($"<color=#ff00ff>我接到<color=#00ff00>{gameObject.name}</color>了唷!</color>");
-            SaveManager.instance.Score += 1;
+            print($"{UnityEditor.ArrayUtility.IndexOf<GameObject>(FruitLevel, gameObject)}"); // Input = ..\Prefabs\Cherries ; Output = 2
+            SaveManager.instance.Score += ( UnityEditor.ArrayUtility.IndexOf<GameObject>(FruitLevel, gameObject) + 1 );
             Destroy(gameObject);
         }
         else if (collision.tag == "Ground")
