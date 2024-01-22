@@ -13,16 +13,6 @@ public class Tools : MonoBehaviour
         // 要求Unity立刻做事 避免在遊戲未執行時不做事
         PlayerPrefs.Save();
     }
-    [MenuItem("工具/分數歸零")]
-    static public void 分數歸零()
-    {
-        SaveManager.instance.Score = 0;
-    }
-    [MenuItem("工具/蘋果數量歸零")]
-    static public void 蘋果數量歸零()
-    {
-        SaveManager.instance.AppleQuantity = 0;
-    }
     [MenuItem("工具/蘋果+1M")]
     static public void 蘋果增加1M()
     {
