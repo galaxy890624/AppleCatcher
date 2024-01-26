@@ -16,9 +16,18 @@ public class Score : MonoBehaviour
         SaveManager.instance.分數變化事件 -= 刷新;
     }
     [SerializeField] Text ScoreText = null;
+    [SerializeField] Text HighScoreText = null;
     void 刷新()
     {
         // 將分數用000,000,000的方式顯示
         ScoreText.text = "Score = " + SaveManager.instance.Score.ToString("N0");
+        HighScoreText.text = "HighScore = " + SaveManager.instance.HighScore.ToString("N0");
+    }
+    private void Update()
+    {
+        if (SaveManager.instance.HighScore < SaveManager.instance.Score)
+        {
+            SaveManager.instance.HighScore = SaveManager.instance.Score;
+        }
     }
 }
