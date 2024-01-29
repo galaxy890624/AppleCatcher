@@ -6,22 +6,12 @@ using UnityEngine.UI;
 
 public class Score : MonoBehaviour
 {
+    [SerializeField] Text ScoreText = null;
+    [SerializeField] Text HighScoreText = null;
     void Start()
     {
         SaveManager.instance.だ计跑てㄆン += 穝;
         穝();
-    }
-    private void OnDisable()
-    {
-        SaveManager.instance.だ计跑てㄆン -= 穝;
-    }
-    [SerializeField] Text ScoreText = null;
-    [SerializeField] Text HighScoreText = null;
-    void 穝()
-    {
-        // 盢だ计ノ000,000,000よΑ陪ボ
-        ScoreText.text = "Score = " + SaveManager.instance.Score.ToString("N0");
-        HighScoreText.text = "HighScore = " + SaveManager.instance.HighScore.ToString("N0");
     }
     private void Update()
     {
@@ -29,5 +19,15 @@ public class Score : MonoBehaviour
         {
             SaveManager.instance.HighScore = SaveManager.instance.Score;
         }
+    }
+    private void OnDisable()
+    {
+        SaveManager.instance.だ计跑てㄆン -= 穝;
+    }
+    void 穝()
+    {
+        // 盢だ计ノ000,000,000よΑ陪ボ
+        ScoreText.text = "Score = " + SaveManager.instance.Score.ToString("N0");
+        HighScoreText.text = "HighScore = " + SaveManager.instance.HighScore.ToString("N0");
     }
 }
