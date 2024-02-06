@@ -27,6 +27,7 @@ public class Menu : MonoBehaviour
     public void 離開()
     {
         Debug.Log("離開");
+        Application.Quit(); // 在 Unity 內點離開遊戲是不會有作用, 需要發佈PC或者手機, 主機執行檔
     }
     public void 返回Menu()
     {
