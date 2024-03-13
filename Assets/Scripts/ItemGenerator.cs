@@ -10,6 +10,24 @@ public class ItemGenerator : MonoBehaviour
     public Item Item;
     public Transform Parent;
 
+    #region singleton
+    // 可以在其他代碼進行訪問
+    static ItemGenerator instance;
+    public ItemManager ChatboxManager;
+
+    //public Text ItemInfo;
+    //public GameObject ChatboxModule_0; // 對方的對話框模組
+    //public GameObject ChatboxModule_1; // 自己的對話框模組
+    void Awake()
+    {
+        if (instance != null)
+        {
+            Destroy(this);
+        }
+        instance = this;
+    }
+    #endregion
+
 }
 
 /*
