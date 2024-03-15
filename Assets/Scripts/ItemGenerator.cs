@@ -13,7 +13,7 @@ public class ItemGenerator : MonoBehaviour
     #region singleton
     // 可以在其他代碼進行訪問
     static ItemGenerator instance;
-    public ItemManager ChatboxManager;
+    public ItemManager ItemManager;
     public GameObject[] FruitLevel = null; // // 所有水果的Prefabs
     void Awake()
     {
