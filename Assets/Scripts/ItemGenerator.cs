@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class ItemGenerator : MonoBehaviour
 {
     public Item Item;
-    public Transform Parent;
+    public Transform Parent; // Content
 
     #region singleton
     // 可以在其他代碼進行訪問
