@@ -28,6 +28,24 @@ public class ItemGenerator : MonoBehaviour
     }
     #endregion
 
+    // initialize
+    private void OnEnable()
+    {
+        // 確保 Item 已經被實例化
+        if (Item == null)
+        {
+            // 實例化 Item
+            Item = ScriptableObject.CreateInstance<Item>();
+        }
+    }
+
+    public void 產生水果()
+    {
+        // 記得在Content加上Vertical Layout Group元件, 把子物件座標鎖定住
+        // Instantiate(ChatboxModule_0, Vector3.zero, Quaternion.identity, Parent);
+        // print($"<color=#ff00ff>Info:<color=#00ff00>{Chatbox.Info}</color></color>");
+    }
+
 }
 
 /*
