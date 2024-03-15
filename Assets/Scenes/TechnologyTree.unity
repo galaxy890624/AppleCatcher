@@ -394,7 +394,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -0.000062790816}
+  m_AnchoredPosition: {x: 0, y: -0.0000297715}
   m_SizeDelta: {x: 0, y: 300}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &278830604
@@ -729,8 +729,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Item: {fileID: 0}
   Parent: {fileID: 246289195}
-  ChatboxManager: {fileID: 0}
+  ItemManager: {fileID: 0}
   FruitLevel: []
+  FruitQuantity: []
 --- !u!1 &887708097
 GameObject:
   m_ObjectHideFlags: 0
