@@ -14,7 +14,8 @@ public class ItemGenerator : MonoBehaviour
     // 可以在其他代碼進行訪問
     static ItemGenerator instance;
     public ItemManager ItemManager;
-    public GameObject[] FruitLevel = null; // // 所有水果的Prefabs
+    public GameObject[] FruitLevel = null; // 所有水果的Prefabs
+    public float[] FruitQuantity = new float[8]; // 所有水果的數量
     void Awake()
     {
         if (instance != null)
