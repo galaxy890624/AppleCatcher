@@ -14,10 +14,7 @@ public class ItemGenerator : MonoBehaviour
     // 可以在其他代碼進行訪問
     static ItemGenerator instance;
     public ItemManager ChatboxManager;
-
-    //public Text ItemInfo;
-    //public GameObject ChatboxModule_0; // 對方的對話框模組
-    //public GameObject ChatboxModule_1; // 自己的對話框模組
+    public GameObject[] FruitLevel = null; // // 所有水果的Prefabs
     void Awake()
     {
         if (instance != null)
