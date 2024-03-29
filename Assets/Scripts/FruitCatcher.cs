@@ -5,7 +5,18 @@ using UnityEditor;
 public class FruitCatcher : MonoBehaviour
 {
     public GameObject[] FruitLevel = null;
-    public Item Item;
+    public Item Item; // 要先實例化才能用
+
+    // initialize
+    private void OnEnable()
+    {
+        // 確保 Item 已經被實例化
+        if (Item == null)
+        {
+            // 實例化 Item
+            Item = ScriptableObject.CreateInstance<Item>();
+        }
+    }
 
     // Physics
     private void OnTriggerEnter2D(Collider2D collision)
