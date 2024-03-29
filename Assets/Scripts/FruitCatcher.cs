@@ -23,7 +23,7 @@ public class FruitCatcher : MonoBehaviour
                 }
             }*/
 
-            // Item.ItemQuantity
+            Item.ItemQuantity += 1;
 
             SaveManager.instance.Score += (UnityEditor.ArrayUtility.IndexOf<GameObject>(FruitLevel, gameObject) + 1);
             Destroy(gameObject);
