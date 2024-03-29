@@ -5,6 +5,8 @@ using UnityEditor;
 public class FruitCatcher : MonoBehaviour
 {
     public GameObject[] FruitLevel = null;
+    public Item Item;
+
     // Physics
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -21,7 +23,7 @@ public class FruitCatcher : MonoBehaviour
                 }
             }*/
 
-
+            // Item.ItemQuantity
 
             SaveManager.instance.Score += (UnityEditor.ArrayUtility.IndexOf<GameObject>(FruitLevel, gameObject) + 1);
             Destroy(gameObject);
