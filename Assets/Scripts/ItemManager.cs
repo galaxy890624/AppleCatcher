@@ -11,12 +11,22 @@ using static UnityEditor.Progress;
 
 public class ItemManager : ScriptableObject
 {
+    #region singleton
+    public static ItemManager Instance;
+
     /// <summary>
-    /// 新的背包
-    /// public List<列表型態> 列表名稱
-    /// 列表裡, "List<>"內的資料型態 必須和 "想要指定的.cs檔案" 一致
-    /// ex:
-    /// public List<Item> itemList = new List<Item>();
+    /// 隨機技能資料
     /// </summary>
-    public List<Item> itemList = new List<Item>();
+    public Item RandomFruit => FruitLevel[Random.Range(0, FruitLevel.Length)];
+
+    [SerializeField, Header("水果等級FruitLevel")]
+    private Item[] FruitLevel = null;
+    private void Awake()
+    {
+        Instance = this;
+    }
+    #endregion
+
+    
+
 }
