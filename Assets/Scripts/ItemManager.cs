@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using static UnityEditor.Progress;
 
+// 背包系統
 // 用來控制Item的儲存
 // 參考ChatboxManager.cs
 
