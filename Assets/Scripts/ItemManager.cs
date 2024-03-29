@@ -12,6 +12,7 @@ using static UnityEditor.Progress;
 public class ItemManager : ScriptableObject
 {
     /// <summary>
+    /// 新的背包
     /// public List<列表型態> 列表名稱
     /// 列表裡, "List<>"內的資料型態 必須和 "想要指定的.cs檔案" 一致
     /// ex:
