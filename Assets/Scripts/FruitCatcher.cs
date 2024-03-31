@@ -14,7 +14,7 @@ public class FruitCatcher : MonoBehaviour
         if (Item == null)
         {
             // ¹ê¨Ò¤Æ Item
-            Item = ScriptableObject.CreateInstance<Item>();
+            // Item = ScriptableObject.CreateInstance<Item>();
         }
     }
 
@@ -34,7 +34,7 @@ public class FruitCatcher : MonoBehaviour
                 }
             }*/
 
-            Item.ItemQuantity += 1;
+            Item.ItemQuantity += 1; // Debug
 
             SaveManager.instance.Score += (UnityEditor.ArrayUtility.IndexOf<GameObject>(FruitLevel, gameObject) + 1);
             Destroy(gameObject);
