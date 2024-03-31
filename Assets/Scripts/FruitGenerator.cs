@@ -19,7 +19,7 @@ public class FruitGenerator : MonoBehaviour
     // Game logic
     private void Update()
     {
-        if (Time.time > SpawnTime)
+        if (Time.timeSinceLevelLoad > SpawnTime) // 為了中途進入遊玩場景, 不要從一進遊戲就開始累積水果, 所以不能用Time.time
         {
             random = UnityEngine.Random.Range(0, 3); // 隨機生成 Lv0 ~ Lv2 的水果
             Generator.position = new Vector3(UnityEngine.Random.Range(LimitLeft, LimitRight), 7f, 0f);
