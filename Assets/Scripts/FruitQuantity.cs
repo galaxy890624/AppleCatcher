@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class FruitQuantity : MonoBehaviour
 {
+    // 從Item調用數量的文字
     private void Update()
     {
 
