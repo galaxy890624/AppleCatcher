@@ -21,6 +21,7 @@ public class ItemManager : ScriptableObject
 
     [SerializeField, Header("水果等級FruitLevel")] // 全部水果資料
     private Item[] FruitLevel = null;
+
     private void Awake()
     {
         Instance = this;
