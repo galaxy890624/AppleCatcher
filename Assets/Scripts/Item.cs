@@ -4,7 +4,7 @@ using UnityEngine;
 
 // 用來儲存水果的資訊
 // ex: 水果動畫, index, 得分, ...
-// 參考Chatbox.cs
+// 參考DataSkill.cs
 
 [CreateAssetMenu(fileName = "New Item", menuName = "Item/New Item")] // 右鍵 > Item > New Item
 

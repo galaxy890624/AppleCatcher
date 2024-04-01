@@ -5,6 +5,13 @@ using UnityEngine.UI;
 
 public class FruitQuantity : MonoBehaviour
 {
+    private void Update()
+    {
+
+    }
+
+
+    /*
     void Start()
     {
         SaveManager.instance.AppleQuantity變化事件 += 刷新;
@@ -18,5 +25,5 @@ public class FruitQuantity : MonoBehaviour
     void 刷新()
     {
         AppleQuantityText.text = SaveManager.instance.AppleQuantity.ToString("N0");
-    }
+    }*/
 }

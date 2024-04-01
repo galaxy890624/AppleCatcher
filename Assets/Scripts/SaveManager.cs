@@ -58,6 +58,7 @@ public class SaveManager
         }
     }
 
+    /*
     /// <summary>水果數量</summary>
     public float FruitQuantity
     {
@@ -93,4 +94,5 @@ public class SaveManager
         }
     }
     public Action AppleQuantity變化事件 = null;
+    */
 }
