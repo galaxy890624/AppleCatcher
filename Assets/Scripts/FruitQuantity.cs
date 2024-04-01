@@ -8,14 +8,14 @@ public class FruitQuantity : MonoBehaviour
 {
     // 從Item調用數量的文字
     // 參考 DoorObject.cs
-    [SerializeField, Header("門的技能")]
-    private Item DoorSkill;
-    [SerializeField, Header("技能名稱")]
-    private TextMeshProUGUI TextSkill;
+    [SerializeField, Header("水果資料")]
+    private Item FruitData;
+    [SerializeField, Header("水果數量文字")]
+    private Text QuantityText;
     private string PlayerName = "獵人";
     private void Update()
     {
-
+        
     }
 
 
