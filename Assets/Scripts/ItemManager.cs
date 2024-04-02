@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
+using Unity.VisualScripting.FullSerializer;
 using UnityEngine;
 using static UnityEditor.Progress;
 
@@ -17,7 +19,7 @@ public class ItemManager : ScriptableObject
     /// <summary>
     /// 隨機技能資料
     /// </summary>
-    public Item RandomFruit => FruitLevel[Random.Range(0, FruitLevel.Length)];
+    public Item RandomFruit => FruitLevel[Random.Range(0, FruitLevel.Length)]; // 隨機拿DataSkill的技能(白板wk10)
 
     [SerializeField, Header("水果等級FruitLevel")] // 全部水果資料
     private Item[] FruitLevel = null;

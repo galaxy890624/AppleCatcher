@@ -864,7 +864,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4fe2a3520469b947bed237ad32ee0f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AppleQuantityText: {fileID: 965978937}
+  FruitData: {fileID: 11400000, guid: 3af1054fc2bd49e4db68f4a1ac330d5f, type: 2}
+  QuantityText: {fileID: 965978937}
 --- !u!1 &891192697
 GameObject:
   m_ObjectHideFlags: 0
