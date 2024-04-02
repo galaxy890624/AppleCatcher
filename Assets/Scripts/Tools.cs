@@ -16,6 +16,6 @@ public class Tools : MonoBehaviour
     [MenuItem("工具/蘋果+1M")]
     static public void 蘋果增加1M()
     {
-        SaveManager.instance.AppleQuantity += 1000000;
+        // SaveManager.instance.AppleQuantity += 1000000;
     }
 }
