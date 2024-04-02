@@ -11,7 +11,7 @@ using static UnityEditor.Progress;
 
 [CreateAssetMenu(fileName = "ItemManager", menuName = "Item/ItemManager")] // 右鍵 > Chatbox > ChatboxManager
 
-public class ItemManager : ScriptableObject
+public class ItemManager : MonoBehaviour
 {
     #region singleton
     public static ItemManager Instance;
@@ -19,7 +19,7 @@ public class ItemManager : ScriptableObject
     /// <summary>
     /// 隨機技能資料
     /// </summary>
-    public Item RandomFruit => FruitLevel[Random.Range(0, FruitLevel.Length)]; // 隨機拿DataSkill的技能(白板wk10)
+    public Item RandomFruit => FruitLevel[Random.Range(0, FruitLevel.Length)];
 
     [SerializeField, Header("水果等級FruitLevel")] // 全部水果資料
     private Item[] FruitLevel = null;
