@@ -16,7 +16,7 @@ public class FruitQuantity : MonoBehaviour
     private string PlayerName = "獵人";
     private void Update()
     {
-        //DoorSkill = SkillManager.Instance.RandomSkill;
+        FruitData = ItemManager.Instance.RandomFruit; // public Item RandomFruit => FruitLevel[Random.Range(0, FruitLevel.Length)];
         // 技能名稱 = 變形.取得第1個子物件 的 第1個子物件 取得它的TMPU
         //TextSkill = transform.GetChild(0).GetChild(0).GetComponent<TextMeshProUGUI>();
         //TextSkill.text = DoorSkill.SkillName;
