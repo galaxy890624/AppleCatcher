@@ -19,7 +19,7 @@ public class FruitQuantity : MonoBehaviour
         FruitData = ItemManager.Instance.RandomFruit; // public Item RandomFruit => FruitLevel[Random.Range(0, FruitLevel.Length)];
         // 技能名稱 = 變形.取得第1個子物件 的 第1個子物件 取得它的TMPU
         //TextSkill = transform.GetChild(0).GetChild(0).GetComponent<TextMeshProUGUI>();
-        //TextSkill.text = DoorSkill.SkillName;
+        QuantityText.text = FruitData.ItemQuantity.ToString("N0");
     }
 
 
