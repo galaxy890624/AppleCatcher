@@ -10,12 +10,16 @@ public class FruitQuantity : MonoBehaviour
     // 參考 DoorObject.cs
     [SerializeField, Header("水果資料")]
     private Item FruitData;
+    public int FruitCount = 8; // 水果種類數量
     [SerializeField, Header("水果數量文字")]
-    private Text QuantityText;
+    private Text[] QuantityText = new Text[5];
     private string PlayerName = "獵人";
     private void Update()
     {
-        
+        //DoorSkill = SkillManager.Instance.RandomSkill;
+        // 技能名稱 = 變形.取得第1個子物件 的 第1個子物件 取得它的TMPU
+        //TextSkill = transform.GetChild(0).GetChild(0).GetComponent<TextMeshProUGUI>();
+        //TextSkill.text = DoorSkill.SkillName;
     }
 
 
