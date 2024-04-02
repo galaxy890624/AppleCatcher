@@ -15,7 +15,6 @@ public class FruitQuantity : MonoBehaviour
 
     private void Update()
     {
-        FruitData = ItemManager.Instance.RandomFruit; // public Item RandomFruit => FruitLevel[Random.Range(0, FruitLevel.Length)];
         QuantityText.text = FruitData.ItemQuantity.ToString("N0");
     }
 
