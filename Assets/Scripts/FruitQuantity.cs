@@ -12,7 +12,7 @@ public class FruitQuantity : MonoBehaviour
     private Item FruitData;
     public int FruitCount = 8; // 水果種類數量
     [SerializeField, Header("水果數量文字")]
-    private Text[] QuantityText = new Text[5];
+    private Text[] QuantityText = null;
     private string PlayerName = "獵人";
     private void Update()
     {

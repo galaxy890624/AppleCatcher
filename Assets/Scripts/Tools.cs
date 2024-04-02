@@ -17,5 +17,6 @@ public class Tools : MonoBehaviour
     static public void Ä«ªG¼W¥[1M()
     {
         // SaveManager.instance.AppleQuantity += 1000000;
+
     }
 }
