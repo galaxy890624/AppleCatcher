@@ -19,6 +19,9 @@ public class ItemManager : MonoBehaviour
     /// <summary>
     /// 隨機技能資料
     /// </summary>
+    /// Scriptable Object
+    /// FruitLevel[0] Apple
+    /// FruitLevel[1] Bananas
     public Item RandomFruit => FruitLevel[Random.Range(0, FruitLevel.Length)];
 
     [SerializeField, Header("水果等級FruitLevel")] // 全部水果資料
