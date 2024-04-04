@@ -1935,7 +1935,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 574eccd43103fa54c9d1d3abd6f8ccb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Bomb: []
+  Bomb:
+  - {fileID: 2352021875271162179, guid: 915d1b847d0d0a147beb20c917f434db, type: 3}
   LimitLeft: -9.5
   LimitRight: 9.5
   Generator: {fileID: 569864710}
