@@ -163,4 +163,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Bomb:
   - {fileID: 2352021875271162179}
-  Item: {fileID: 0}
+  Item: {fileID: 11400000, guid: 578803fe0c3b709449a5c737b072150b, type: 2}
