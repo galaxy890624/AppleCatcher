@@ -5,6 +5,9 @@ using UnityEditor;
 using Unity.Mathematics;
 public class Tools : MonoBehaviour
 {
+    public GameObject[] FruitLevel = null;
+    public Item Item;
+
     [MenuItem("工具/清除所有資料")]
     static public void 清除資料()
     {
