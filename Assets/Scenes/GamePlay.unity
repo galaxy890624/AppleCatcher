@@ -1876,6 +1876,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1813713637}
   - component: {fileID: 1813713638}
+  - component: {fileID: 1813713639}
   m_Layer: 0
   m_Name: GenerateSystem
   m_TagString: Untagged
@@ -1919,6 +1920,22 @@ MonoBehaviour:
   - {fileID: 6104634668136370181, guid: 45b1b9b0b6a1ae74cb4c341c551f6998, type: 3}
   - {fileID: 6030425306187109848, guid: eeb4bbf5002bd03459f960303461c2f4, type: 3}
   - {fileID: 6881425429470151428, guid: 54f595abc6b5814409dfa7b586a6ee43, type: 3}
+  LimitLeft: -9.5
+  LimitRight: 9.5
+  Generator: {fileID: 569864710}
+--- !u!114 &1813713639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1813713636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 574eccd43103fa54c9d1d3abd6f8ccb5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Bomb: []
   LimitLeft: -9.5
   LimitRight: 9.5
   Generator: {fileID: 569864710}
