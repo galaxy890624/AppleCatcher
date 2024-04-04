@@ -57,42 +57,19 @@ public class SaveManager
             PlayerPrefs.SetInt("HighScore", value);
         }
     }
-
-    /*
-    /// <summary>水果數量</summary>
-    public float FruitQuantity
+    /// <summary>
+    /// 鑰匙顯示器
+    /// </summary>
+    public int 任務道具
     {
-        get // 當有人讀取FruitQuantity
+        get { return _任務道具; }
+        set
         {
-            return PlayerPrefs.GetFloat("FruitQuantity", 0);
-        }
-        set // 當有人寫入FruitQuantity
-        {
-            PlayerPrefs.SetFloat("FruitQuantity", value);
-            if (FruitQuantity變化事件 != null)
-            {
-                FruitQuantity變化事件.Invoke();
-            }
+            _任務道具 = value;
+            if (任務道具刷新 != null)
+                任務道具刷新.Invoke();
         }
     }
-    public Action FruitQuantity變化事件 = null;
-
-    /// <summary>蘋果數量</summary>
-    public float AppleQuantity
-    {
-        get // 當有人讀取AppleQuantity
-        {
-            return PlayerPrefs.GetFloat("AppleQuantity", 0);
-        }
-        set // 當有人寫入AppleQuantity
-        {
-            PlayerPrefs.SetFloat("AppleQuantity", value);
-            if (AppleQuantity變化事件 != null)
-            {
-                AppleQuantity變化事件.Invoke();
-            }
-        }
-    }
-    public Action AppleQuantity變化事件 = null;
-    */
+    int _任務道具 = 0;
+    public Action 任務道具刷新 = null;
 }
