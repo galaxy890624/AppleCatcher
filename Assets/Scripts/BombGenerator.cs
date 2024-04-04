@@ -24,7 +24,7 @@ public class BombGenerator : MonoBehaviour
             //random = UnityEngine.Random.Range(0, 3); // 隨機生成 Lv0 ~ Lv2 的水果
             Generator.position = new Vector3(UnityEngine.Random.Range(LimitLeft, LimitRight), 7f, 0f);
             Instantiate(Bomb[random], Generator.position, Quaternion.identity);
-            SpawnTime += 1f; // Delay 1秒
+            SpawnTime += 5f; // Delay 5秒
         }
     }
 }
