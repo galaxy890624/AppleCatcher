@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class HPMonitor : MonoBehaviour
 {
+    [Header("血量的愛心物件")]
+    public GameObject HP;
+    
     private void Start()
     {
         SaveManager.instance.任務道具刷新 += 刷新顯示;
