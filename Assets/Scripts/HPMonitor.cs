@@ -19,9 +19,9 @@ public class HPMonitor : MonoBehaviour
     {
         for (int i = 0; i < 鑰匙UI.Count; i++)
         {
-            鑰匙UI[i].SetActive(false);
+            鑰匙UI[i].SetActive(true);
         }
-
+        /*
         for (int i = 0; i < 鑰匙UI.Count; i++)
         {
             // 如果i比道具數量小就顯示
@@ -32,6 +32,6 @@ public class HPMonitor : MonoBehaviour
             {
                 鑰匙UI[i].SetActive(true);
             }
-        }
+        }*/
     }
 }
