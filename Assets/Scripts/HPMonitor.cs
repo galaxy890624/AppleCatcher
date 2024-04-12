@@ -7,6 +7,8 @@ public class HPMonitor : MonoBehaviour
     [Header("血量的愛心物件")]
     public GameObject Heart;
     public int HP = 5;
+    [Header("血量顯示器的位置")]
+    public Transform Parent;
     
     private void Start()
     {
@@ -23,7 +25,7 @@ public class HPMonitor : MonoBehaviour
     {
         for (int i = 0; i < HP; i++) // 血量UI.Count
         {
-            Instantiate(Heart, Vector3.zero, Quaternion.identity);
+            Instantiate(Heart, Vector3.zero, Quaternion.identity, Parent);
         }
         /*
         for (int i = 0; i < 鑰匙UI.Count; i++)
