@@ -17,7 +17,7 @@ public class HPMonitor : MonoBehaviour
     {
         SaveManager.instance.愛心變化事件 -= 刷新顯示;
     }
-    [SerializeField] List<GameObject> 血量UI = new List<GameObject>();
+    [SerializeField] List<GameObject> 血量UI = new List<GameObject>(); // 血量的愛心物件
 
     void 刷新顯示()
     {
