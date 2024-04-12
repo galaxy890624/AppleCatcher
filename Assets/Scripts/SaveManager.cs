@@ -60,16 +60,16 @@ public class SaveManager
     /// <summary>
     /// 鑰匙顯示器
     /// </summary>
-    public int 任務道具
+    public int 血量
     {
-        get { return _任務道具; }
+        get { return _血量; }
         set
         {
-            _任務道具 = value;
-            if (任務道具刷新 != null)
-                任務道具刷新.Invoke();
+            _血量 = value;
+            if (愛心變化事件 != null)
+                愛心變化事件.Invoke();
         }
     }
-    int _任務道具 = 0;
-    public Action 任務道具刷新 = null;
+    int _血量 = 0;
+    public Action 愛心變化事件 = null;
 }

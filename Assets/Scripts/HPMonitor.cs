@@ -9,12 +9,12 @@ public class HPMonitor : MonoBehaviour
     
     private void Start()
     {
-        SaveManager.instance.任務道具刷新 += 刷新顯示;
+        SaveManager.instance.愛心變化事件 += 刷新顯示;
         刷新顯示();
     }
     private void OnDisable()
     {
-        SaveManager.instance.任務道具刷新 -= 刷新顯示;
+        SaveManager.instance.愛心變化事件 -= 刷新顯示;
     }
     [SerializeField] List<GameObject> 鑰匙UI = new List<GameObject>();
 
