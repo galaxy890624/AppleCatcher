@@ -25,7 +25,7 @@ public class HPMonitor : MonoBehaviour
     {
         for (int i = 0; i < HP; i++) // ¦å¶qUI.Count
         {
-            Instantiate(Heart, Vector3.zero, Quaternion.identity, Parent);
+            Instantiate(Heart, new Vector3(0f, 0f, 0f), Quaternion.identity, Parent); // new Vector3(-270f, -245f, 0f)
         }
         /*
         for (int i = 0; i < Æ_°ÍUI.Count; i++)
