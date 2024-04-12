@@ -23,7 +23,7 @@ public class HPMonitor : MonoBehaviour
     {
         for (int i = 0; i < HP; i++) // ¦å¶qUI.Count
         {
-            ¦å¶qUI[i].SetActive(true);
+            Instantiate(Heart, Vector3.zero, Quaternion.identity);
         }
         /*
         for (int i = 0; i < Æ_°ÍUI.Count; i++)
