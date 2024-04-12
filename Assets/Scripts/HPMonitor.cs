@@ -16,13 +16,13 @@ public class HPMonitor : MonoBehaviour
     {
         SaveManager.instance.愛心變化事件 -= 刷新顯示;
     }
-    [SerializeField] List<GameObject> 鑰匙UI = new List<GameObject>();
+    [SerializeField] List<GameObject> 血量UI = new List<GameObject>();
 
     void 刷新顯示()
     {
-        for (int i = 0; i < 鑰匙UI.Count; i++)
+        for (int i = 0; i < 血量UI.Count; i++)
         {
-            鑰匙UI[i].SetActive(true);
+            血量UI[i].SetActive(true);
         }
         /*
         for (int i = 0; i < 鑰匙UI.Count; i++)
