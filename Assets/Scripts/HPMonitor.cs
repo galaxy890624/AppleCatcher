@@ -21,7 +21,7 @@ public class HPMonitor : MonoBehaviour
 
     void 刷新顯示()
     {
-        for (int i = 0; i < HP; i++)
+        for (int i = 0; i < HP; i++) // 血量UI.Count
         {
             血量UI[i].SetActive(true);
         }
