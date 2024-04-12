@@ -5,7 +5,8 @@ using UnityEngine;
 public class HPMonitor : MonoBehaviour
 {
     [Header("血量的愛心物件")]
-    public GameObject HP;
+    public GameObject Heart;
+    public int HP = 5;
     
     private void Start()
     {
@@ -20,7 +21,7 @@ public class HPMonitor : MonoBehaviour
 
     void 刷新顯示()
     {
-        for (int i = 0; i < 血量UI.Count; i++)
+        for (int i = 0; i < HP; i++)
         {
             血量UI[i].SetActive(true);
         }
