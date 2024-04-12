@@ -2033,6 +2033,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Heart: {fileID: 215903654822246078, guid: 9f99c4d915438b1439dfbddff6f63220, type: 3}
   HP: 5
+  Parent: {fileID: 1830286308}
   "\u8840\u91CFUI":
   - {fileID: 215903654822246078, guid: 9f99c4d915438b1439dfbddff6f63220, type: 3}
   - {fileID: 215903654822246078, guid: 9f99c4d915438b1439dfbddff6f63220, type: 3}
