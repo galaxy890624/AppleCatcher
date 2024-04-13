@@ -23,22 +23,12 @@ public class HPMonitor : MonoBehaviour
         for (int i = 0; i < transform.childCount; i++)
         {
             Destroy(transform.GetChild(0).gameObject); // 用for迴圈, 每次都刪除第1個(index = 0)子物件
+            print($"<color=#ff00ff>已刪除第<color=00ff00>{i}</color>個愛心</color>");
         }
         for (int i = 0; i < SaveManager.instance.血量; i++)
         {
-            Instantiate(血量UI[i], new Vector3(-14f + i, 7f, 0f), Quaternion.identity, Parent); // new Vector3(-270f, -245f, 0f)
+            Instantiate(血量UI[i], new Vector3(-14f + i, 7f, 0f), Quaternion.identity, Parent); // 跟隨Stage的座標
+            print($"<color=#ff00ff>已生成第<color=00ff00>{i}</color>個愛心</color>");
         }
-        /*
-        for (int i = 0; i < 鑰匙UI.Count; i++)
-        {
-            // 如果i比道具數量小就顯示
-            // 0 < 2 O
-            // 1 < 2 O
-            // 2 < 2 X
-            if (i < SaveManager.instance.任務道具)
-            {
-                鑰匙UI[i].SetActive(true);
-            }
-        }*/
     }
 }
