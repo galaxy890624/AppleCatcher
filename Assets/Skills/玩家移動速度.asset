@@ -14,4 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   SkillName: "\u73A9\u5BB6\u79FB\u52D5\u901F\u5EA6"
   Lv: 0
-  SkillValues: []
+  SkillValues:
+  - 2
+  - 2.2
+  - 2.5
