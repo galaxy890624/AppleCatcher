@@ -2,6 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// 玩家的技能資料
+/// </summary>
+[CreateAssetMenu(menuName = "Skills/New Skill")]
+
 public class DataSkill : ScriptableObject
 {
     [Header("技能名稱")]
