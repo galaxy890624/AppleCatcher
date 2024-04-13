@@ -1,0 +1,9 @@
+public static void RemoveAllChildren(GameObject Parent)
+{
+	Transform Transform
+	for ( int i = 0; i < Parent.transform.childCount; i++ )
+	{
+		Transform = Parent.transform.GetChild(i);
+		GameObject.Destroy(transform.GameObject);
+	}
+}
