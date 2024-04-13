@@ -1934,7 +1934,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 783f2adfa1dd7e045a3b772b1cb632f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DataSkills: []
+  DataSkills:
+  - {fileID: 11400000, guid: 0df22bd9985c62f44afb59e01999c697, type: 2}
   MoveSpeed: {fileID: 1629531591}
 --- !u!1 &1813713636
 GameObject:
