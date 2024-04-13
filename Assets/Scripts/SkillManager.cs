@@ -30,7 +30,7 @@ public class SkillManager : MonoBehaviour
     public void UpgradeSkill(DataSkill UpgradeSkill)
     {
         print($"<color=#ff00ff>升級技能 : <color=#00ff00>{UpgradeSkill.SkillName}</color></color>");
-        if (UpgradeSkill.SkillName == "箭間隔")
+        if (UpgradeSkill.SkillName == "玩家移動速度") // 必須和ScriptableObject內的SkillName一致
         {
             MoveSpeed.Upgrade();
         }
