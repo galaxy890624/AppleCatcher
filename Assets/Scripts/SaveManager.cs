@@ -62,7 +62,10 @@ public class SaveManager
     /// </summary>
     public int 血量
     {
-        get { return _血量; }
+        get
+        {
+            return _血量;
+        }
         set
         {
             _血量 = value;
