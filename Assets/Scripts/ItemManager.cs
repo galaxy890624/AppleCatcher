@@ -9,7 +9,7 @@ using static UnityEditor.Progress;
 // ノㄓ北Item纗
 // 把σSkillManager.cs
 
-[CreateAssetMenu(fileName = "ItemManager", menuName = "Item/ItemManager")] // 龄 > Chatbox > ChatboxManager
+//[CreateAssetMenu(fileName = "ItemManager", menuName = "Item/ItemManager")] // 龄 > Chatbox > ChatboxManager
 
 public class ItemManager : MonoBehaviour
 {
@@ -23,8 +23,8 @@ public class ItemManager : MonoBehaviour
     /// FruitLevel[0] Apple
     /// FruitLevel[1] Bananas
 
-    [SerializeField, Header("狦单FruitLevel")] // 场狦戈
-    private Item[] FruitLevel = null;
+    //[SerializeField, Header("狦单FruitLevel")] // 场狦戈
+    //private Item[] FruitLevel = null;
 
     private void Awake()
     {
