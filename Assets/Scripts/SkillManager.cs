@@ -22,6 +22,19 @@ public class SkillManager : MonoBehaviour
         Instance = this;
     }
     #endregion
+
+    /// <summary>
+    /// 升級技能
+    /// </summary>
+    /// <param name="UpgradeSkill">要升級的技能</param>
+    public void UpgradeSkill(DataSkill UpgradeSkill)
+    {
+        print($"<color=#ff00ff>升級技能 : <color=#00ff00>{UpgradeSkill.SkillName}</color></color>");
+        if (UpgradeSkill.SkillName == "箭間隔")
+        {
+            MoveSpeed.Upgrade();
+        }
+    }
 }
 
 /*
@@ -41,4 +54,41 @@ public class SkillManager : MonoBehaviour
     private UpgradeSkill Skill5Speed;
     [SerializeField, Header("技能_7_尺寸")]
     private UpgradeSkill Skill7Size;
+
+    /// <summary>
+        /// 升級技能
+        /// </summary>
+        /// <param name="UpgradeSkill">要升級的技能</param>
+        public void UpgradeSkill(DataSkill UpgradeSkill)
+        {
+            print($"<color=#ff00ff>升級技能 : <color=#00ff00>{UpgradeSkill.SkillName}</color></color>");
+            if (UpgradeSkill.SkillName == "恢復獵人血量" )
+            {
+                Skill6Hp.Upgrade();
+            }
+            if (UpgradeSkill.SkillName == "箭間隔")
+            {
+                Skill1Interval.Upgrade();
+            }
+            if (UpgradeSkill.SkillName == "箭攻擊力")
+            {
+                Skill2Attack.Upgrade();
+            }
+            if (UpgradeSkill.SkillName == "箭數量")
+            {
+                Skill3Count.Upgrade();
+            }
+            if (UpgradeSkill.SkillName == "水平速度")
+            {
+                Skill4PlayerHorizontalSpeed.Upgrade();
+            }
+            if (UpgradeSkill.SkillName == "箭發射速度")
+            {
+                Skill5Speed.Upgrade();
+            }
+            if (UpgradeSkill.SkillName == "箭大小")
+            {
+                Skill7Size.Upgrade();
+            }
+        }
 */
