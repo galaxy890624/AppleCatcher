@@ -23,8 +23,8 @@ public class FruitCatcher : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            print($"<color=#ff00ff>我接到<color=#00ff00>{gameObject.name}</color>了唷!</color>");
-            print($"{UnityEditor.ArrayUtility.IndexOf<GameObject>(FruitLevel, gameObject)}"); // Input = ..\Prefabs\Cherries ; Output = 2
+            //print($"<color=#ff00ff>我接到<color=#00ff00>{gameObject.name}</color>了唷!</color>");
+            //print($"{UnityEditor.ArrayUtility.IndexOf<GameObject>(FruitLevel, gameObject)}"); // Input = ..\Prefabs\Cherries ; Output = 2
             // 吃到水果 數量就 + 1
             Item.ItemQuantity += 1;
 
@@ -33,7 +33,7 @@ public class FruitCatcher : MonoBehaviour
         }
         else if (collision.tag == "Ground")
         {
-            print($"<color=#ff00ff><color=#00ff00>{gameObject.name}</color>掉在地上了唷!</color>");
+            //print($"<color=#ff00ff><color=#00ff00>{gameObject.name}</color>掉在地上了唷!</color>");
             Destroy(gameObject);
         }
     }
