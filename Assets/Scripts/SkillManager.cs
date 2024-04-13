@@ -14,7 +14,8 @@ public class SkillManager : MonoBehaviour
     [SerializeField, Header("全部技能資料")]
     private DataSkill[] DataSkills = null;
 
-
+    [SerializeField, Header("玩家移動速度")]
+    private UpgradeSkill MoveSpeed;
 
     private void Awake()
     {
