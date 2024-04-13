@@ -5,8 +5,7 @@ using UnityEditor;
 using Unity.Mathematics;
 public class Tools : MonoBehaviour
 {
-    public GameObject[] FruitLevel = null;
-    public Item Item;
+    public Item[] Item;
 
     [MenuItem("工具/清除所有資料")]
     static public void 清除資料()
@@ -19,7 +18,6 @@ public class Tools : MonoBehaviour
     [MenuItem("工具/蘋果+1M")]
     static public void 蘋果增加1M()
     {
-        // SaveManager.instance.AppleQuantity += 1000000;
 
     }
 }
