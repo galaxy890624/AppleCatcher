@@ -23,7 +23,11 @@ public class HPMonitor : MonoBehaviour
 
     void 刷新顯示()
     {
-        for (int i = 0; i < HP; i++) // 血量UI.Count
+        for (int i = 0; i < transform.childCount; i++)
+        {
+            Destroy(transform.GetChild(0).gameObject); // 用for迴圈, 每次都刪除第1個(index = 0)子物件
+        }
+        for (int i = 0; i < HP; i++)
         {
             Instantiate(血量UI[i], new Vector3(-14f + i, 7f, 0f), Quaternion.identity, Parent); // new Vector3(-270f, -245f, 0f)
         }
