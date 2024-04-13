@@ -6,7 +6,6 @@ public class HPMonitor : MonoBehaviour
 {
     [Header("血量的愛心物件")]
     public GameObject Heart;
-    public int HP = SaveManager.instance.血量;
     [Header("血量顯示器的位置")]
     public Transform Parent;
     
@@ -27,7 +26,7 @@ public class HPMonitor : MonoBehaviour
         {
             Destroy(transform.GetChild(0).gameObject); // 用for迴圈, 每次都刪除第1個(index = 0)子物件
         }
-        for (int i = 0; i < HP; i++)
+        for (int i = 0; i < SaveManager.instance.血量; i++)
         {
             Instantiate(血量UI[i], new Vector3(-14f + i, 7f, 0f), Quaternion.identity, Parent); // new Vector3(-270f, -245f, 0f)
         }
