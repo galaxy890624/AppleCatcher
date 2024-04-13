@@ -29,6 +29,8 @@ public class BombCatcher : MonoBehaviour
             Item.ItemQuantity += 1;
 
             SaveManager.instance.Score -= (UnityEditor.ArrayUtility.IndexOf<GameObject>(Bomb, gameObject) + 1); // ¦©¤À
+            SaveManager.instance.¦å¶q -= 1;
+
             Destroy(gameObject);
         }
         else if (collision.tag == "Ground")

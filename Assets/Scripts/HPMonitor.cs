@@ -6,7 +6,7 @@ public class HPMonitor : MonoBehaviour
 {
     [Header("血量的愛心物件")]
     public GameObject Heart;
-    public int HP = 5;
+    public int HP = SaveManager.instance.血量;
     [Header("血量顯示器的位置")]
     public Transform Parent;
     

@@ -70,6 +70,6 @@ public class SaveManager
                 愛心變化事件.Invoke();
         }
     }
-    int _血量 = 0;
+    int _血量 = 5; // 初始值 = 5
     public Action 愛心變化事件 = null;
 }
