@@ -11,8 +11,20 @@ public class SkillManager : MonoBehaviour
     /// 隨機技能資料
     /// </summary>
     public DataSkill RandomSkill => DataSkills[Random.Range(0, DataSkills.Length)];
-
     [SerializeField, Header("全部技能資料")]
+    private DataSkill[] DataSkills = null;
+
+
+
+    private void Awake()
+    {
+        Instance = this;
+    }
+    #endregion
+}
+
+/*
+ * [SerializeField, Header("全部技能資料")]
     private DataSkill[] DataSkills = null;
     [SerializeField, Header("技能_6_補血")]
     private UpgradeSkill Skill6Hp;
@@ -28,10 +40,4 @@ public class SkillManager : MonoBehaviour
     private UpgradeSkill Skill5Speed;
     [SerializeField, Header("技能_7_尺寸")]
     private UpgradeSkill Skill7Size;
-
-    private void Awake()
-    {
-        Instance = this;
-    }
-    #endregion
-}
+*/
