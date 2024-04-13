@@ -67,7 +67,9 @@ public class SaveManager
         {
             _血量 = value;
             if (愛心變化事件 != null)
+            {
                 愛心變化事件.Invoke();
+            }
         }
     }
     int _血量 = 5; // 初始值 = 5

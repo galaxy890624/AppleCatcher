@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class HPMonitor : MonoBehaviour
 {
-    [Header("血量的愛心物件")]
-    public GameObject Heart;
     [Header("血量顯示器的位置")]
     public Transform Parent;
     
