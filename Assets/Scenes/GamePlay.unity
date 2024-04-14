@@ -2024,6 +2024,7 @@ GameObject:
   - component: {fileID: 1830286309}
   - component: {fileID: 1830286312}
   - component: {fileID: 1830286311}
+  - component: {fileID: 1830286313}
   m_Layer: 5
   m_Name: "\u8840\u91CF\u986F\u793A\u5668"
   m_TagString: Untagged
@@ -2134,3 +2135,23 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &1830286313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1830286307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbf1ecb3df666274b9b3c3fff1283723, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Bomb: []
+  Item: {fileID: 11400000, guid: 578803fe0c3b709449a5c737b072150b, type: 2}
+  "\u8840\u91CFUI":
+  - {fileID: 215903654822246078, guid: 9f99c4d915438b1439dfbddff6f63220, type: 3}
+  - {fileID: 215903654822246078, guid: 9f99c4d915438b1439dfbddff6f63220, type: 3}
+  - {fileID: 215903654822246078, guid: 9f99c4d915438b1439dfbddff6f63220, type: 3}
+  - {fileID: 215903654822246078, guid: 9f99c4d915438b1439dfbddff6f63220, type: 3}
+  - {fileID: 215903654822246078, guid: 9f99c4d915438b1439dfbddff6f63220, type: 3}
