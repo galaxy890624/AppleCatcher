@@ -9,13 +9,12 @@ public class BombCatcher : MonoBehaviour
     [SerializeField] List<GameObject> 血量UI = new List<GameObject>(); // 血量的愛心物件
 
     // initialize
-    private void OnEnable()
+    private void Awake()
     {
-        // 確保 Item 已經被實例化
-        if (Item == null)
+        for (int i = 0; i < transform.childCount; i++)
         {
-            // 實例化 Item
-            // Item = ScriptableObject.CreateInstance<Item>();
+            print($"<color=#ff00ff>已刪除第<color=#00ff00>{i}</color>個愛心 : <color=#00ff00>{transform.GetChild(0).name}</color></color>");
+            Destroy(transform.GetChild(0).gameObject); // 用for迴圈, 每次都刪除第1個(index = 0)子物件
         }
     }
 
