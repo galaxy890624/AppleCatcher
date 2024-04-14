@@ -1,7 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿
 using UnityEngine;
-using UnityEditor;
 public class FruitCatcher : MonoBehaviour
 {
     public GameObject[] FruitLevel = null;

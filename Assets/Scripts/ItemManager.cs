@@ -1,9 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using System.Diagnostics;
-using Unity.VisualScripting.FullSerializer;
+﻿
 using UnityEngine;
-using static UnityEditor.Progress;
 
 // 背包系統
 // 用來控制Item的儲存
