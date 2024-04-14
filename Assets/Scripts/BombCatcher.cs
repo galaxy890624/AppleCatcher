@@ -24,7 +24,7 @@ public class BombCatcher : MonoBehaviour
             // 吃到炸彈 數量就 + 1
             Item.ItemQuantity += 1;
 
-            SaveManager.instance.Score -= (UnityEditor.ArrayUtility.IndexOf<GameObject>(Bomb, gameObject) + 1); // 扣分
+            SaveManager.instance.Score -= 1; // 扣分
             HPMonitor.Damage();
             // SaveManager.instance.血量 -= 1;
 

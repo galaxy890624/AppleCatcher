@@ -26,7 +26,7 @@ public class FruitCatcher : MonoBehaviour
             // 吃到水果 數量就 + 1
             Item.ItemQuantity += 1;
 
-            SaveManager.instance.Score += (UnityEditor.ArrayUtility.IndexOf<GameObject>(FruitLevel, gameObject) + 1);
+            SaveManager.instance.Score += 1;
             Destroy(gameObject);
         }
         else if (collision.tag == "Ground")
