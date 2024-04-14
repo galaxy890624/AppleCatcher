@@ -60,7 +60,7 @@ public class SaveManager
     /// <summary>
     /// 血量顯示器
     /// </summary>
-    public int 血量
+    /*public int 血量
     {
         get
         {
@@ -76,5 +76,5 @@ public class SaveManager
         }
     }
     int _血量 = 5; // 初始值 = 5
-    public Action 愛心變化事件 = null;
+    public Action 愛心變化事件 = null;*/
 }

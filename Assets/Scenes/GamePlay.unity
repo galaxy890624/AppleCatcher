@@ -2102,13 +2102,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ddab9eb6076687489fb68c8686f7970, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Heart: {fileID: 215903654822246078, guid: 9f99c4d915438b1439dfbddff6f63220, type: 3}
   Parent: {fileID: 1830286308}
-  "\u8840\u91CFUI":
-  - {fileID: 215903654822246078, guid: 9f99c4d915438b1439dfbddff6f63220, type: 3}
-  - {fileID: 215903654822246078, guid: 9f99c4d915438b1439dfbddff6f63220, type: 3}
-  - {fileID: 215903654822246078, guid: 9f99c4d915438b1439dfbddff6f63220, type: 3}
-  - {fileID: 215903654822246078, guid: 9f99c4d915438b1439dfbddff6f63220, type: 3}
-  - {fileID: 215903654822246078, guid: 9f99c4d915438b1439dfbddff6f63220, type: 3}
+  "\u8840\u91CFUI": []
 --- !u!114 &1830286312
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2149,9 +2145,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Bomb: []
   Item: {fileID: 11400000, guid: 578803fe0c3b709449a5c737b072150b, type: 2}
-  "\u8840\u91CFUI":
-  - {fileID: 215903654822246078, guid: 9f99c4d915438b1439dfbddff6f63220, type: 3}
-  - {fileID: 215903654822246078, guid: 9f99c4d915438b1439dfbddff6f63220, type: 3}
-  - {fileID: 215903654822246078, guid: 9f99c4d915438b1439dfbddff6f63220, type: 3}
-  - {fileID: 215903654822246078, guid: 9f99c4d915438b1439dfbddff6f63220, type: 3}
-  - {fileID: 215903654822246078, guid: 9f99c4d915438b1439dfbddff6f63220, type: 3}
+  Parent: {fileID: 1830286308}
+  HPMonitor: {fileID: 0}
