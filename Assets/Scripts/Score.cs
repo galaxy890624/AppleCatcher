@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SocialPlatforms.Impl;
@@ -10,8 +10,8 @@ public class Score : MonoBehaviour
     [SerializeField] Text HighScoreText = null;
     void Start()
     {
-        SaveManager.instance.¤À¼ÆÅÜ¤Æ¨Æ¥ó += ¨ê·s;
-        ¨ê·s();
+        SaveManager.instance.åˆ†æ•¸è®ŠåŒ–äº‹ä»¶ += åˆ·æ–°;
+        åˆ·æ–°();
     }
     private void Update()
     {
@@ -22,11 +22,11 @@ public class Score : MonoBehaviour
     }
     private void OnDisable()
     {
-        SaveManager.instance.¤À¼ÆÅÜ¤Æ¨Æ¥ó -= ¨ê·s;
+        SaveManager.instance.åˆ†æ•¸è®ŠåŒ–äº‹ä»¶ -= åˆ·æ–°;
     }
-    void ¨ê·s()
+    void åˆ·æ–°()
     {
-        // ±N¤À¼Æ¥Î000,000,000ªº¤è¦¡Åã¥Ü
+        // å°‡åˆ†æ•¸ç”¨000,000,000çš„æ–¹å¼é¡¯ç¤º
         ScoreText.text = "Score = " + SaveManager.instance.Score.ToString("N0");
         HighScoreText.text = "HighScore = " + SaveManager.instance.HighScore.ToString("N0");
     }

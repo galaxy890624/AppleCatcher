@@ -1,19 +1,19 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-// ¥Î¨ÓÀx¦s¤ôªGªº¸ê°T
-// ex: ¤ôªG°Êµe, index, ±o¤À, ...
-// °Ñ¦ÒDataSkill.cs
+// ç”¨ä¾†å„²å­˜æ°´æœçš„è³‡è¨Š
+// ex: æ°´æœå‹•ç•«, index, å¾—åˆ†, ...
+// åƒè€ƒDataSkill.cs
 
-[CreateAssetMenu(fileName = "New Item", menuName = "Item/New Item")] // ¥kÁä > Item > New Item
+[CreateAssetMenu(fileName = "New Item", menuName = "Item/New Item")] // å³éµ > Item > New Item
 
 public class Item : ScriptableObject
 {
     public int Index;
     public string ItemName;
-    public Sprite ItemImage; // ÀY¹³¹Ï¤ù
-    public int GetScore; // ¦Y¨ì«á±o¨ìªº¤À¼Æ
-    public float ItemQuantity; // «ù¦³¼Æ¶q
+    public Sprite ItemImage; // é ­åƒåœ–ç‰‡
+    public int GetScore; // åƒåˆ°å¾Œå¾—åˆ°çš„åˆ†æ•¸
+    public float ItemQuantity; // æŒæœ‰æ•¸é‡
 
 }

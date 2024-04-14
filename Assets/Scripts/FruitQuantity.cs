@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -6,11 +6,11 @@ using UnityEngine.UI;
 
 public class FruitQuantity : MonoBehaviour
 {
-    // ±qItem½Õ¥Î¼Æ¶qªº¤å¦r
-    // °Ñ¦Ò DoorObject.cs
-    [SerializeField, Header("¤ôªG¸ê®Æ")]
+    // å¾Itemèª¿ç”¨æ•¸é‡çš„æ–‡å­—
+    // åƒè€ƒ DoorObject.cs
+    [SerializeField, Header("æ°´æœè³‡æ–™")]
     private Item FruitData;
-    [SerializeField, Header("¤ôªG¼Æ¶q¤å¦r")]
+    [SerializeField, Header("æ°´æœæ•¸é‡æ–‡å­—")]
     private Text QuantityText = null;
 
     private void Update()
@@ -21,40 +21,40 @@ public class FruitQuantity : MonoBehaviour
     /*
     void Start()
     {
-        SaveManager.instance.AppleQuantityÅÜ¤Æ¨Æ¥ó += ¨ê·s;
-        ¨ê·s();
+        SaveManager.instance.AppleQuantityè®ŠåŒ–äº‹ä»¶ += åˆ·æ–°;
+        åˆ·æ–°();
     }
     private void OnDisable()
     {
-        SaveManager.instance.AppleQuantityÅÜ¤Æ¨Æ¥ó -= ¨ê·s;
+        SaveManager.instance.AppleQuantityè®ŠåŒ–äº‹ä»¶ -= åˆ·æ–°;
     }
     [SerializeField] Text AppleQuantityText = null;
-    void ¨ê·s()
+    void åˆ·æ–°()
     {
         AppleQuantityText.text = SaveManager.instance.AppleQuantity.ToString("N0");
     }*/
 
     /*public class DoorObject : MonoBehaviour
     {
-        [SerializeField, Header("ªùªº§Ş¯à")]
+        [SerializeField, Header("é–€çš„æŠ€èƒ½")]
         private DataSkill DoorSkill;
-        [SerializeField, Header("§Ş¯à¦WºÙ")]
+        [SerializeField, Header("æŠ€èƒ½åç¨±")]
         private TextMeshProUGUI TextSkill;
-        private string PlayerName = "Ây¤H";
+        private string PlayerName = "çµäºº";
 
         private void Awake()
         {
             DoorSkill = SkillManager.Instance.RandomSkill;
-            // §Ş¯à¦WºÙ = ÅÜ§Î.¨ú±o²Ä1­Ó¤lª«¥ó ªº ²Ä1­Ó¤lª«¥ó ¨ú±o¥¦ªºTMPU
+            // æŠ€èƒ½åç¨± = è®Šå½¢.å–å¾—ç¬¬1å€‹å­ç‰©ä»¶ çš„ ç¬¬1å€‹å­ç‰©ä»¶ å–å¾—å®ƒçš„TMPU
             TextSkill = transform.GetChild(0).GetChild(0).GetComponent<TextMeshProUGUI>();
             TextSkill.text = DoorSkill.SkillName;
         }
         private void OnTriggerEnter(Collider other)
         {
-            // ¦pªG ¸I¨ìª«¥óªº¦WºÙ ¬O ª±®a
+            // å¦‚æœ ç¢°åˆ°ç‰©ä»¶çš„åç¨± æ˜¯ ç©å®¶
             if (other.name.Contains(PlayerName))
             {
-                // print($"<color=#ff00ff>ª±®a¸I¨ì¤F<color=#00ff00></color></color>");
+                // print($"<color=#ff00ff>ç©å®¶ç¢°åˆ°äº†<color=#00ff00></color></color>");
                 SkillManager.Instance.UpgradeSkill(DoorSkill);
             }
         }

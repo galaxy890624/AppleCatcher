@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,13 +8,13 @@ public class SkillManager : MonoBehaviour
     public static SkillManager Instance;
 
     /// <summary>
-    /// ÀH¾÷§Ş¯à¸ê®Æ
+    /// éš¨æ©ŸæŠ€èƒ½è³‡æ–™
     /// </summary>
     public DataSkill RandomSkill => DataSkills[Random.Range(0, DataSkills.Length)];
-    [SerializeField, Header("¥ş³¡§Ş¯à¸ê®Æ")]
+    [SerializeField, Header("å…¨éƒ¨æŠ€èƒ½è³‡æ–™")]
     private DataSkill[] DataSkills = null;
 
-    [SerializeField, Header("ª±®a²¾°Ê³t«×")]
+    [SerializeField, Header("ç©å®¶ç§»å‹•é€Ÿåº¦")]
     private UpgradeSkill MoveSpeed;
 
     private void Awake()
@@ -24,13 +24,13 @@ public class SkillManager : MonoBehaviour
     #endregion
 
     /// <summary>
-    /// ¤É¯Å§Ş¯à
+    /// å‡ç´šæŠ€èƒ½
     /// </summary>
-    /// <param name="UpgradeSkill">­n¤É¯Åªº§Ş¯à</param>
+    /// <param name="UpgradeSkill">è¦å‡ç´šçš„æŠ€èƒ½</param>
     public void UpgradeSkill(DataSkill UpgradeSkill)
     {
-        print($"<color=#ff00ff>¤É¯Å§Ş¯à : <color=#00ff00>{UpgradeSkill.SkillName}</color></color>");
-        if (UpgradeSkill.SkillName == "ª±®a²¾°Ê³t«×") // ¥²¶·©MScriptableObject¤ºªºSkillName¤@­P
+        print($"<color=#ff00ff>å‡ç´šæŠ€èƒ½ : <color=#00ff00>{UpgradeSkill.SkillName}</color></color>");
+        if (UpgradeSkill.SkillName == "ç©å®¶ç§»å‹•é€Ÿåº¦") // å¿…é ˆå’ŒScriptableObjectå…§çš„SkillNameä¸€è‡´
         {
             MoveSpeed.Upgrade();
         }
@@ -38,55 +38,55 @@ public class SkillManager : MonoBehaviour
 }
 
 /*
- * [SerializeField, Header("¥ş³¡§Ş¯à¸ê®Æ")]
+ * [SerializeField, Header("å…¨éƒ¨æŠ€èƒ½è³‡æ–™")]
     private DataSkill[] DataSkills = null;
-    [SerializeField, Header("§Ş¯à_6_¸É¦å")]
+    [SerializeField, Header("æŠ€èƒ½_6_è£œè¡€")]
     private UpgradeSkill Skill6Hp;
-    [SerializeField, Header("§Ş¯à_1_¶¡¹j")]
+    [SerializeField, Header("æŠ€èƒ½_1_é–“éš”")]
     private UpgradeSkill Skill1Interval;
-    [SerializeField, Header("§Ş¯à_2_§ğÀ»¤O")]
+    [SerializeField, Header("æŠ€èƒ½_2_æ”»æ“ŠåŠ›")]
     private UpgradeSkill Skill2Attack;
-    [SerializeField, Header("§Ş¯à_3_¼Æ¶q")]
+    [SerializeField, Header("æŠ€èƒ½_3_æ•¸é‡")]
     private UpgradeSkill Skill3Count;
-    [SerializeField, Header("§Ş¯à_4_ª±®a¤ô¥­³t«×")]
+    [SerializeField, Header("æŠ€èƒ½_4_ç©å®¶æ°´å¹³é€Ÿåº¦")]
     private UpgradeSkill Skill4PlayerHorizontalSpeed;
-    [SerializeField, Header("§Ş¯à_5_­¸¦æ³t«×")]
+    [SerializeField, Header("æŠ€èƒ½_5_é£›è¡Œé€Ÿåº¦")]
     private UpgradeSkill Skill5Speed;
-    [SerializeField, Header("§Ş¯à_7_¤Ø¤o")]
+    [SerializeField, Header("æŠ€èƒ½_7_å°ºå¯¸")]
     private UpgradeSkill Skill7Size;
 
     /// <summary>
-        /// ¤É¯Å§Ş¯à
+        /// å‡ç´šæŠ€èƒ½
         /// </summary>
-        /// <param name="UpgradeSkill">­n¤É¯Åªº§Ş¯à</param>
+        /// <param name="UpgradeSkill">è¦å‡ç´šçš„æŠ€èƒ½</param>
         public void UpgradeSkill(DataSkill UpgradeSkill)
         {
-            print($"<color=#ff00ff>¤É¯Å§Ş¯à : <color=#00ff00>{UpgradeSkill.SkillName}</color></color>");
-            if (UpgradeSkill.SkillName == "«ì´_Ây¤H¦å¶q" )
+            print($"<color=#ff00ff>å‡ç´šæŠ€èƒ½ : <color=#00ff00>{UpgradeSkill.SkillName}</color></color>");
+            if (UpgradeSkill.SkillName == "æ¢å¾©çµäººè¡€é‡" )
             {
                 Skill6Hp.Upgrade();
             }
-            if (UpgradeSkill.SkillName == "½b¶¡¹j")
+            if (UpgradeSkill.SkillName == "ç®­é–“éš”")
             {
                 Skill1Interval.Upgrade();
             }
-            if (UpgradeSkill.SkillName == "½b§ğÀ»¤O")
+            if (UpgradeSkill.SkillName == "ç®­æ”»æ“ŠåŠ›")
             {
                 Skill2Attack.Upgrade();
             }
-            if (UpgradeSkill.SkillName == "½b¼Æ¶q")
+            if (UpgradeSkill.SkillName == "ç®­æ•¸é‡")
             {
                 Skill3Count.Upgrade();
             }
-            if (UpgradeSkill.SkillName == "¤ô¥­³t«×")
+            if (UpgradeSkill.SkillName == "æ°´å¹³é€Ÿåº¦")
             {
                 Skill4PlayerHorizontalSpeed.Upgrade();
             }
-            if (UpgradeSkill.SkillName == "½bµo®g³t«×")
+            if (UpgradeSkill.SkillName == "ç®­ç™¼å°„é€Ÿåº¦")
             {
                 Skill5Speed.Upgrade();
             }
-            if (UpgradeSkill.SkillName == "½b¤j¤p")
+            if (UpgradeSkill.SkillName == "ç®­å¤§å°")
             {
                 Skill7Size.Upgrade();
             }

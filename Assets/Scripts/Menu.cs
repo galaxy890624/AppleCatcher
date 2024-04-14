@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
@@ -6,32 +6,32 @@ using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour
 {
-    // [SerializeField] UnityEvent «ö¶sÂIÀ»­µ®Ä = null;
+    // [SerializeField] UnityEvent æŒ‰éˆ•é»æ“ŠéŸ³æ•ˆ = null;
 
-    public void ¶}©l()
+    public void é–‹å§‹()
     {
-        Debug.Log("¶}©l");
+        Debug.Log("é–‹å§‹");
         SceneManager.LoadScene("GamePlay");
     }
 
-    public void ¤É¯Å()
+    public void å‡ç´š()
     {
-        Debug.Log("¤É¯Å");
+        Debug.Log("å‡ç´š");
         SceneManager.LoadScene("TechnologyTree");
 
     }
-    public void ¿ï¶µ()
+    public void é¸é …()
     {
-        Debug.Log("¿ï¶µ");
+        Debug.Log("é¸é …");
     }
-    public void Â÷¶}()
+    public void é›¢é–‹()
     {
-        Debug.Log("Â÷¶}");
-        Application.Quit(); // ¦b Unity ¤ºÂIÂ÷¶}¹CÀ¸¬O¤£·|¦³§@¥Î, »İ­nµo§GPC©ÎªÌ¤â¾÷, ¥D¾÷°õ¦æÀÉ
+        Debug.Log("é›¢é–‹");
+        Application.Quit(); // åœ¨ Unity å…§é»é›¢é–‹éŠæˆ²æ˜¯ä¸æœƒæœ‰ä½œç”¨, éœ€è¦ç™¼ä½ˆPCæˆ–è€…æ‰‹æ©Ÿ, ä¸»æ©ŸåŸ·è¡Œæª”
     }
-    public void ªğ¦^Menu()
+    public void è¿”å›Menu()
     {
-        Debug.Log("ªğ¦^Menu");
+        Debug.Log("è¿”å›Menu");
         SceneManager.LoadScene("Menu");
     }
 }

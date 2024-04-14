@@ -1,21 +1,21 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
-/// ¤É¯Å§Ş¯à
+/// å‡ç´šæŠ€èƒ½
 /// </summary>
 public class UpgradeSkill : MonoBehaviour
 {
-    // protected «OÅ@ : ¤¹³\¦¹Ãş§O»P¤lÃş§O¦s¨ú
-    // [SerializeField, Header("§Ş¯à¸ê®Æ")]
-    [Header("§Ş¯à¸ê®Æ")]
+    // protected ä¿è­· : å…è¨±æ­¤é¡åˆ¥èˆ‡å­é¡åˆ¥å­˜å–
+    // [SerializeField, Header("æŠ€èƒ½è³‡æ–™")]
+    [Header("æŠ€èƒ½è³‡æ–™")]
     public DataSkill Dataskill;
 
     /// <summary>
-    /// ¤É¯Å
+    /// å‡ç´š
     /// </summary>
-    /// virtual µêÀÀ : ¤¹³\¤lÃş§O¨Ï¥Î override ÂĞ¼g
+    /// virtual è™›æ“¬ : å…è¨±å­é¡åˆ¥ä½¿ç”¨ override è¦†å¯«
     public virtual void Upgrade()
     {
 

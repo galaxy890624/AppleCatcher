@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
@@ -6,9 +6,9 @@ using UnityEngine.SceneManagement;
 
 public class TechnologyTree : MonoBehaviour
 {
-    public void Â÷¶}()
+    public void é›¢é–‹()
     {
-        Debug.Log("Â÷¶}¬ì§Þ¾ð");
+        Debug.Log("é›¢é–‹ç§‘æŠ€æ¨¹");
         SceneManager.LoadScene("Menu");
     }
 }

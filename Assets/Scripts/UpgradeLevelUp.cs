@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,13 +6,13 @@ public class UpgradeLevelUp : UpgradeSkill
 {
     protected virtual void Awake()
     {
-        // ¹CÀ¸¤@¶}©l®É«ì´_ 0 µ¥
+        // éŠæˆ²ä¸€é–‹å§‹æ™‚æ¢å¾© 0 ç­‰
         Dataskill.Lv = 0;
     }
     public override void Upgrade()
     {
         base.Upgrade();
         Dataskill.Lv++;
-        print($"<color=#ff00ff>¤É¯Å«á§Ş¯àªº¯à¤O­È = <color=#00ff00>{Dataskill.SkillValue}</color></color>");
+        print($"<color=#ff00ff>å‡ç´šå¾ŒæŠ€èƒ½çš„èƒ½åŠ›å€¼ = <color=#00ff00>{Dataskill.SkillValue}</color></color>");
     }
 }

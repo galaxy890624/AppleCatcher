@@ -1,29 +1,29 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
 
 public class SaveManager
 {
-    #region ³æ¨Ò³]­p¼Ò¦¡
+    #region å–®ä¾‹è¨­è¨ˆæ¨¡å¼
     public static SaveManager instance
     {
-        get // ·í¦³¤HÅª¨ú§Ú¡A·í¦³¤H»İ­n§Ú¡B¨Ï¥Î§Ú
+        get // ç•¶æœ‰äººè®€å–æˆ‘ï¼Œç•¶æœ‰äººéœ€è¦æˆ‘ã€ä½¿ç”¨æˆ‘
         {
-            // ¦pªG§Ú¤£¦s¦b©ó°O¾ĞÅé¤¤
+            // å¦‚æœæˆ‘ä¸å­˜åœ¨æ–¼è¨˜æ†¶é«”ä¸­
             if (_instance == null)
             {
-                // ¨º»ò§Ú´N¦Û¤v³Ğ³y¦Û¤v
+                // é‚£éº¼æˆ‘å°±è‡ªå·±å‰µé€ è‡ªå·±
                 _instance = new SaveManager();
             }
-            // ¦^¶Çµ¹¹ï¤è
+            // å›å‚³çµ¦å°æ–¹
             return _instance;
         }
     }
     static SaveManager _instance = null;
     #endregion
 
-    /// <summary> ¤À¼Æ(¨C¦¸­«¶}Âk¹s) </summary>
+    /// <summary> åˆ†æ•¸(æ¯æ¬¡é‡é–‹æ­¸é›¶) </summary>
     public int Score
     {
         get
@@ -33,48 +33,48 @@ public class SaveManager
         set
         {
             _Score = value;
-            if (¤À¼ÆÅÜ¤Æ¨Æ¥ó != null)
+            if (åˆ†æ•¸è®ŠåŒ–äº‹ä»¶ != null)
             {
-                ¤À¼ÆÅÜ¤Æ¨Æ¥ó.Invoke();
+                åˆ†æ•¸è®ŠåŒ–äº‹ä»¶.Invoke();
             }
         }
     }
     int _Score = 0;
-    public Action ¤À¼ÆÅÜ¤Æ¨Æ¥ó = null;
+    public Action åˆ†æ•¸è®ŠåŒ–äº‹ä»¶ = null;
 
-    /// <summary>³Ì°ª¤À(¦sÅªÀÉ)</summary>
+    /// <summary>æœ€é«˜åˆ†(å­˜è®€æª”)</summary>
     public int HighScore
     {
-        // ·í¦³¤HÅª¨ú³Ì°ª¤Àªº®É­Ô ª½±µ¥hµwºĞ¬d¸ßHighScore­È
-        // ¦pªG¬d¤£¨ì´Nµ¹0
+        // ç•¶æœ‰äººè®€å–æœ€é«˜åˆ†çš„æ™‚å€™ ç›´æ¥å»ç¡¬ç¢ŸæŸ¥è©¢HighScoreå€¼
+        // å¦‚æœæŸ¥ä¸åˆ°å°±çµ¦0
         get
         {
             return PlayerPrefs.GetInt("HighScore", 0);
         }
-        // ·í¦³¤H¼g¤J³Ì°ª¤Àªº®É­Ô ±N³o­Ó­È¦s¨ìµwºĞªºHighScore­È·í¤¤
+        // ç•¶æœ‰äººå¯«å…¥æœ€é«˜åˆ†çš„æ™‚å€™ å°‡é€™å€‹å€¼å­˜åˆ°ç¡¬ç¢Ÿçš„HighScoreå€¼ç•¶ä¸­
         set
         {
             PlayerPrefs.SetInt("HighScore", value);
         }
     }
     /// <summary>
-    /// ¦å¶qÅã¥Ü¾¹
+    /// è¡€é‡é¡¯ç¤ºå™¨
     /// </summary>
-    /*public int ¦å¶q
+    /*public int è¡€é‡
     {
         get
         {
-            return _¦å¶q;
+            return _è¡€é‡;
         }
         set
         {
-            _¦å¶q = value;
-            if (·R¤ßÅÜ¤Æ¨Æ¥ó != null)
+            _è¡€é‡ = value;
+            if (æ„›å¿ƒè®ŠåŒ–äº‹ä»¶ != null)
             {
-                ·R¤ßÅÜ¤Æ¨Æ¥ó.Invoke();
+                æ„›å¿ƒè®ŠåŒ–äº‹ä»¶.Invoke();
             }
         }
     }
-    int _¦å¶q = 5; // ªì©l­È = 5
-    public Action ·R¤ßÅÜ¤Æ¨Æ¥ó = null;*/
+    int _è¡€é‡ = 5; // åˆå§‹å€¼ = 5
+    public Action æ„›å¿ƒè®ŠåŒ–äº‹ä»¶ = null;*/
 }

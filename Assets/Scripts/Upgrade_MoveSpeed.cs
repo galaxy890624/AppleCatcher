@@ -1,12 +1,12 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
-/// ¤É¯Å§Ş¯à : ª±®a²¾°Ê³t«×
+/// å‡ç´šæŠ€èƒ½ : ç©å®¶ç§»å‹•é€Ÿåº¦
 /// </summary>
 /// 
-public class Upgrade_MoveSpeed : UpgradeLevelUp // °Ñ¦Ò Upgrade_4_PlayerHorizontalSpeed
+public class Upgrade_MoveSpeed : UpgradeLevelUp // åƒè€ƒ Upgrade_4_PlayerHorizontalSpeed
 {
 
 }

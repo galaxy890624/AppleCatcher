@@ -1,51 +1,51 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class HPMonitor : MonoBehaviour
 {
-    [SerializeField, Header("¦å¶q·R¤ß¹w¸mª«")]
+    [SerializeField, Header("è¡€é‡æ„›å¿ƒé ç½®ç‰©")]
     GameObject Heart;
-    [Header("¦å¶qÅã¥Ü¾¹ªº¦ì¸m")]
+    [Header("è¡€é‡é¡¯ç¤ºå™¨çš„ä½ç½®")]
     public Transform Parent;
-    [SerializeField] List<GameObject> ¦å¶qUI = new List<GameObject>(); // ¦å¶qªº·R¤ßª«¥ó
+    [SerializeField] List<GameObject> è¡€é‡UI = new List<GameObject>(); // è¡€é‡çš„æ„›å¿ƒç‰©ä»¶
 
     int hp = 5;
 
     /*private void Awake()
     {
-        for (int i = 0; i < SaveManager.instance.¦å¶q; i++)
+        for (int i = 0; i < SaveManager.instance.è¡€é‡; i++)
         {
-            Instantiate(¦å¶qUI[i], new Vector3(-14f + i, 7f, 0f), Quaternion.identity, Parent); // ¸òÀHStageªº®y¼Ğ
-            print($"<color=#ff00ff>¤w¥Í¦¨²Ä<color=#00ff00>{i}</color>­Ó·R¤ß</color>");
+            Instantiate(è¡€é‡UI[i], new Vector3(-14f + i, 7f, 0f), Quaternion.identity, Parent); // è·Ÿéš¨Stageçš„åº§æ¨™
+            print($"<color=#ff00ff>å·²ç”Ÿæˆç¬¬<color=#00ff00>{i}</color>å€‹æ„›å¿ƒ</color>");
         }
     }*/
     private void Start()
     {
-        //SaveManager.instance.·R¤ßÅÜ¤Æ¨Æ¥ó += ¨ê·sÅã¥Ü;
-        ¨ê·sÅã¥Ü();
+        //SaveManager.instance.æ„›å¿ƒè®ŠåŒ–äº‹ä»¶ += åˆ·æ–°é¡¯ç¤º;
+        åˆ·æ–°é¡¯ç¤º();
     }
     private void OnDisable()
     {
-        //SaveManager.instance.·R¤ßÅÜ¤Æ¨Æ¥ó -= ¨ê·sÅã¥Ü;
+        //SaveManager.instance.æ„›å¿ƒè®ŠåŒ–äº‹ä»¶ -= åˆ·æ–°é¡¯ç¤º;
     }
 
-    public void ¨ê·sÅã¥Ü()
+    public void åˆ·æ–°é¡¯ç¤º()
     {
         for (int i = 0; i < hp; i++)
         {
-            GameObject HeartList = Instantiate(Heart, new Vector3(-14f + i, 7f, 0f), Quaternion.identity, Parent); // ¸òÀHStageªº®y¼Ğ
-            ¦å¶qUI.Add(HeartList);
-            print($"<color=#ff00ff>¤w¥Í¦¨²Ä<color=#00ff00>{i}</color>­Ó·R¤ß</color>");
+            GameObject HeartList = Instantiate(Heart, new Vector3(-14f + i, 7f, 0f), Quaternion.identity, Parent); // è·Ÿéš¨Stageçš„åº§æ¨™
+            è¡€é‡UI.Add(HeartList);
+            print($"<color=#ff00ff>å·²ç”Ÿæˆç¬¬<color=#00ff00>{i}</color>å€‹æ„›å¿ƒ</color>");
         }
-        //SaveManager.instance.·R¤ßÅÜ¤Æ¨Æ¥ó -= ¨ê·sÅã¥Ü;
+        //SaveManager.instance.æ„›å¿ƒè®ŠåŒ–äº‹ä»¶ -= åˆ·æ–°é¡¯ç¤º;
     }
     public void Damage()
     {
-        Destroy(¦å¶qUI[--hp]);
+        Destroy(è¡€é‡UI[--hp]);
         /*
-         * [--hp] ²Ä1¦¸°õ¦æ¬O 4 (·|¥ı´î)
-         * [hp--] ²Ä1¦¸°õ¦æ¬O 5
+         * [--hp] ç¬¬1æ¬¡åŸ·è¡Œæ˜¯ 4 (æœƒå…ˆæ¸›)
+         * [hp--] ç¬¬1æ¬¡åŸ·è¡Œæ˜¯ 5
          */
     }
 }

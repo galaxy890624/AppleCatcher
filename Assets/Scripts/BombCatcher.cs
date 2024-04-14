@@ -1,18 +1,18 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class BombCatcher : MonoBehaviour
 {
     public GameObject[] Bomb = null;
-    public Item Item; // ­n¥ı¹ê¨Ò¤Æ¤~¯à¥Î
+    public Item Item; // è¦å…ˆå¯¦ä¾‹åŒ–æ‰èƒ½ç”¨
     public Transform Parent;
     public HPMonitor HPMonitor;
 
     // initialize
     private void Awake()
     {
-        HPMonitor = GameObject.Find("¦å¶qÅã¥Ü¾¹").GetComponent<HPMonitor>();
+        HPMonitor = GameObject.Find("è¡€é‡é¡¯ç¤ºå™¨").GetComponent<HPMonitor>();
     }
 
     // Physics
@@ -20,25 +20,25 @@ public class BombCatcher : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            //print($"<color=#ff00ff>§Ú±µ¨ì<color=#00ff00>{gameObject.name}</color>¤F­ò!</color>");
+            //print($"<color=#ff00ff>æˆ‘æ¥åˆ°<color=#00ff00>{gameObject.name}</color>äº†å”·!</color>");
             //print($"{UnityEditor.ArrayUtility.IndexOf<GameObject>(Bomb, gameObject)}"); // Input = ..\Prefabs\Cherries ; Output = 2
-            // ¦Y¨ì¬µ¼u ¼Æ¶q´N + 1
+            // åƒåˆ°ç‚¸å½ˆ æ•¸é‡å°± + 1
             Item.ItemQuantity += 1;
 
-            SaveManager.instance.Score -= (UnityEditor.ArrayUtility.IndexOf<GameObject>(Bomb, gameObject) + 1); // ¦©¤À
+            SaveManager.instance.Score -= (UnityEditor.ArrayUtility.IndexOf<GameObject>(Bomb, gameObject) + 1); // æ‰£åˆ†
             HPMonitor.Damage();
-            // SaveManager.instance.¦å¶q -= 1;
+            // SaveManager.instance.è¡€é‡ -= 1;
 
             Destroy(gameObject);
             for (int i = 0; i < transform.childCount; i++)
             {
-                print($"<color=#ff00ff>¤w§R°£²Ä<color=#00ff00>{i}</color>­Ó·R¤ß : <color=#00ff00>{transform.GetChild(0).name}</color></color>");
+                print($"<color=#ff00ff>å·²åˆªé™¤ç¬¬<color=#00ff00>{i}</color>å€‹æ„›å¿ƒ : <color=#00ff00>{transform.GetChild(0).name}</color></color>");
                 
             }
         }
         else if (collision.tag == "Ground")
         {
-            //print($"<color=#ff00ff><color=#00ff00>{gameObject.name}</color>±¼¦b¦a¤W¤F­ò!</color>");
+            //print($"<color=#ff00ff><color=#00ff00>{gameObject.name}</color>æ‰åœ¨åœ°ä¸Šäº†å”·!</color>");
             Destroy(gameObject);
         }
     }

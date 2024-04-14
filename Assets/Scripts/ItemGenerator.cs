@@ -1,9 +1,9 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-// ¥Î¨Ó±±¨îItemªº¥Í¦¨
+// ç”¨ä¾†æ§åˆ¶Itemçš„ç”Ÿæˆ
 
 public class ItemGenerator : MonoBehaviour
 {
@@ -11,11 +11,11 @@ public class ItemGenerator : MonoBehaviour
     public Transform Parent; // Content
 
     #region singleton
-    // ¥i¥H¦b¨ä¥L¥N½X¶i¦æ³X°İ
+    // å¯ä»¥åœ¨å…¶ä»–ä»£ç¢¼é€²è¡Œè¨ªå•
     static ItemGenerator instance;
     public ItemManager ItemManager;
-    public GameObject[] FruitLevel = null; // ©Ò¦³¤ôªGªºPrefabs
-    public float[] FruitQuantity = new float[8]; // ©Ò¦³¤ôªGªº¼Æ¶q
+    public GameObject[] FruitLevel = null; // æ‰€æœ‰æ°´æœçš„Prefabs
+    public float[] FruitQuantity = new float[8]; // æ‰€æœ‰æ°´æœçš„æ•¸é‡
     void Awake()
     {
         if (instance != null)
@@ -29,17 +29,17 @@ public class ItemGenerator : MonoBehaviour
     // initialize
     private void OnEnable()
     {
-        // ½T«O Item ¤w¸g³Q¹ê¨Ò¤Æ
+        // ç¢ºä¿ Item å·²ç¶“è¢«å¯¦ä¾‹åŒ–
         if (Item == null)
         {
-            // ¹ê¨Ò¤Æ Item
+            // å¯¦ä¾‹åŒ– Item
             Item = ScriptableObject.CreateInstance<Item>();
         }
     }
 
-    public void ²£¥Í¤ôªG()
+    public void ç”¢ç”Ÿæ°´æœ()
     {
-        // °O±o¦bContent¥[¤WVertical Layout Group¤¸¥ó, §â¤lª«¥ó®y¼ĞÂê©w¦í
+        // è¨˜å¾—åœ¨ContentåŠ ä¸ŠVertical Layout Groupå…ƒä»¶, æŠŠå­ç‰©ä»¶åº§æ¨™é–å®šä½
         // Instantiate(ChatboxModule_0, Vector3.zero, Quaternion.identity, Parent);
         // print($"<color=#ff00ff>Info:<color=#00ff00>{Chatbox.Info}</color></color>");
     }
@@ -52,7 +52,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-// ¥Î¨Ó±±¨îChatboxªº¥Í¦¨
+// ç”¨ä¾†æ§åˆ¶Chatboxçš„ç”Ÿæˆ
 
 public class ChatboxGenerator : MonoBehaviour
 {
@@ -60,12 +60,12 @@ public class ChatboxGenerator : MonoBehaviour
     public Transform Parent;
 
     #region singleton
-    // ¥i¥H¦b¨ä¥L¥N½X¶i¦æ³X°İ
+    // å¯ä»¥åœ¨å…¶ä»–ä»£ç¢¼é€²è¡Œè¨ªå•
     static ChatboxGenerator instance;
     public ChatboxManager ChatboxManager;
     public Text ItemInfo;
-    public GameObject ChatboxModule_0; // ¹ï¤èªº¹ï¸Ü®Ø¼Ò²Õ
-    public GameObject ChatboxModule_1; // ¦Û¤vªº¹ï¸Ü®Ø¼Ò²Õ
+    public GameObject ChatboxModule_0; // å°æ–¹çš„å°è©±æ¡†æ¨¡çµ„
+    public GameObject ChatboxModule_1; // è‡ªå·±çš„å°è©±æ¡†æ¨¡çµ„
 
     //public List<GameObject> Slots = new List<GameObject>();
 
@@ -82,23 +82,23 @@ public class ChatboxGenerator : MonoBehaviour
     // initialize
     private void OnEnable()
     {
-        // ½T«O Chatbox ¤w¸g³Q¹ê¨Ò¤Æ
+        // ç¢ºä¿ Chatbox å·²ç¶“è¢«å¯¦ä¾‹åŒ–
         if (Chatbox == null)
         {
-            // ¹ê¨Ò¤Æ Chatbox
+            // å¯¦ä¾‹åŒ– Chatbox
             Chatbox = ScriptableObject.CreateInstance<Chatbox>();
         }
     }
 
-    public void ²£¥Í¹ï¸Ü®Ø0()
+    public void ç”¢ç”Ÿå°è©±æ¡†0()
     {
-        // °O±o¦bContent¥[¤WVertical Layout Group¤¸¥ó, §â¤lª«¥ó®y¼ĞÂê©w¦í
+        // è¨˜å¾—åœ¨ContentåŠ ä¸ŠVertical Layout Groupå…ƒä»¶, æŠŠå­ç‰©ä»¶åº§æ¨™é–å®šä½
         Instantiate(ChatboxModule_0, Vector3.zero, Quaternion.identity, Parent);
         print($"<color=#ff00ff>Info:<color=#00ff00>{Chatbox.Info}</color></color>");
     }
-    public void ²£¥Í¹ï¸Ü®Ø1()
+    public void ç”¢ç”Ÿå°è©±æ¡†1()
     {
-        // °O±o¦bContent¥[¤WVertical Layout Group¤¸¥ó, §â¤lª«¥ó®y¼ĞÂê©w¦í
+        // è¨˜å¾—åœ¨ContentåŠ ä¸ŠVertical Layout Groupå…ƒä»¶, æŠŠå­ç‰©ä»¶åº§æ¨™é–å®šä½
         Instantiate(ChatboxModule_1, Vector3.zero, Quaternion.identity, Parent);
         print($"<color=#ff00ff>Info:<color=#00ff00>{Chatbox.Info}</color></color>");
     }
@@ -108,27 +108,27 @@ public class ChatboxGenerator : MonoBehaviour
 /*
  * public class FruitGenerator : MonoBehaviour
 {
-    [Header("¤ôªGµ¥¯Å")] // ¥²¶·¥Ñ Lv 0 ±Æ¨ì Lv 7
-    public GameObject[] FruitLevel = null; // ©Ò¦³¤ôªGªºPrefabs
+    [Header("æ°´æœç­‰ç´š")] // å¿…é ˆç”± Lv 0 æ’åˆ° Lv 7
+    public GameObject[] FruitLevel = null; // æ‰€æœ‰æ°´æœçš„Prefabs
     // Vector3 InitialPosition;
-    [Header("¥ªÃä¬É"), Tooltip("³o¬O¤ôªG¥X²{³Ì¥ªÃäªº¦ì¸m­­¨î")]
+    [Header("å·¦é‚Šç•Œ"), Tooltip("é€™æ˜¯æ°´æœå‡ºç¾æœ€å·¦é‚Šçš„ä½ç½®é™åˆ¶")]
     public float LimitLeft = -9.5f;
-    [Header("¥kÃä¬É"), Tooltip("³o¬O¤ôªG¥X²{³Ì¥kÃäªº¦ì¸m­­¨î")]
+    [Header("å³é‚Šç•Œ"), Tooltip("é€™æ˜¯æ°´æœå‡ºç¾æœ€å³é‚Šçš„ä½ç½®é™åˆ¶")]
     public float LimitRight = 9.5f;
-    [Header("¥Í¦¨¤ôªGªº¦ì¸m")]
+    [Header("ç”Ÿæˆæ°´æœçš„ä½ç½®")]
     public Transform Generator;
     int random = 0;
-    float SpawnTime = 0f; // ¥Í¦¨¤ôªGªº­p®É¾¹
+    float SpawnTime = 0f; // ç”Ÿæˆæ°´æœçš„è¨ˆæ™‚å™¨
 
     // Game logic
     private void Update()
     {
         if (Time.time > SpawnTime)
         {
-            random = UnityEngine.Random.Range(0, 3); // ÀH¾÷¥Í¦¨ Lv0 ~ Lv2 ªº¤ôªG
+            random = UnityEngine.Random.Range(0, 3); // éš¨æ©Ÿç”Ÿæˆ Lv0 ~ Lv2 çš„æ°´æœ
             Generator.position = new Vector3(UnityEngine.Random.Range(LimitLeft, LimitRight), 7f, 0f);
             Instantiate(FruitLevel[random], Generator.position, Quaternion.identity);
-            SpawnTime += 1f; // Delay 1¬í
+            SpawnTime += 1f; // Delay 1ç§’
         }
     }
 }

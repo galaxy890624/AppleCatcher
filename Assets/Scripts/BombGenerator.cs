@@ -1,30 +1,30 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class BombGenerator : MonoBehaviour
 {
-    [Header("¬µ¼u")]
-    public GameObject[] Bomb = null; // ©Ò¦³¬µ¼uªºPrefabs
+    [Header("ç‚¸å½ˆ")]
+    public GameObject[] Bomb = null; // æ‰€æœ‰ç‚¸å½ˆçš„Prefabs
     // Vector3 InitialPosition;
-    [Header("¥ªÃä¬É"), Tooltip("³o¬O¤ôªG¥X²{³Ì¥ªÃäªº¦ì¸m­­¨î")]
+    [Header("å·¦é‚Šç•Œ"), Tooltip("é€™æ˜¯æ°´æœå‡ºç¾æœ€å·¦é‚Šçš„ä½ç½®é™åˆ¶")]
     public float LimitLeft = -9.5f;
-    [Header("¥kÃä¬É"), Tooltip("³o¬O¤ôªG¥X²{³Ì¥kÃäªº¦ì¸m­­¨î")]
+    [Header("å³é‚Šç•Œ"), Tooltip("é€™æ˜¯æ°´æœå‡ºç¾æœ€å³é‚Šçš„ä½ç½®é™åˆ¶")]
     public float LimitRight = 9.5f;
-    [Header("¥Í¦¨¬µ¼uªº¦ì¸m")]
+    [Header("ç”Ÿæˆç‚¸å½ˆçš„ä½ç½®")]
     public Transform Generator;
     int random = 0;
-    float SpawnTime = 0f; // ¥Í¦¨¬µ¼uªº­p®É¾¹
+    float SpawnTime = 0f; // ç”Ÿæˆç‚¸å½ˆçš„è¨ˆæ™‚å™¨
 
     // Game logic
     private void Update()
     {
-        if (Time.timeSinceLevelLoad > SpawnTime) // ¬°¤F¤¤³~¶i¤J¹Cª±³õ´º, ¤£­n±q¤@¶i¹CÀ¸´N¶}©l²Ö¿n¬µ¼u, ©Ò¥H¤£¯à¥ÎTime.time
+        if (Time.timeSinceLevelLoad > SpawnTime) // ç‚ºäº†ä¸­é€”é€²å…¥éŠç©å ´æ™¯, ä¸è¦å¾ä¸€é€²éŠæˆ²å°±é–‹å§‹ç´¯ç©ç‚¸å½ˆ, æ‰€ä»¥ä¸èƒ½ç”¨Time.time
         {
-            //random = UnityEngine.Random.Range(0, 3); // ÀH¾÷¥Í¦¨ Lv0 ~ Lv2 ªº¤ôªG
+            //random = UnityEngine.Random.Range(0, 3); // éš¨æ©Ÿç”Ÿæˆ Lv0 ~ Lv2 çš„æ°´æœ
             Generator.position = new Vector3(UnityEngine.Random.Range(LimitLeft, LimitRight), 7f, 0f);
             Instantiate(Bomb[random], Generator.position, Quaternion.identity);
-            SpawnTime += 5f; // Delay 5¬í
+            SpawnTime += 5f; // Delay 5ç§’
         }
     }
 }

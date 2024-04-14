@@ -1,26 +1,26 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
-/// ª±®aªº§Ş¯à¸ê®Æ
+/// ç©å®¶çš„æŠ€èƒ½è³‡æ–™
 /// </summary>
 [CreateAssetMenu(menuName = "Skills/New Skill")]
 
 public class DataSkill : ScriptableObject
 {
-    [Header("§Ş¯à¦WºÙ")]
+    [Header("æŠ€èƒ½åç¨±")]
     public string SkillName;
-    [Header("§Ş¯àµ¥¯Å"), Range(0, 20)]
+    [Header("æŠ€èƒ½ç­‰ç´š"), Range(0, 20)]
     public int Lv = 0;
-    [Header("§Ş¯à¨C­Óµ¥¯Å¯à¤O­È")]
+    [Header("æŠ€èƒ½æ¯å€‹ç­‰ç´šèƒ½åŠ›å€¼")]
     public float[] SkillValues = null;
 
-    // Lambda ¹Bºâ¤l (Â²¼g)
-    // Lambda ²Å¸¹«á¥i¥H¹Bºâ©Î¼gµ{¦¡
+    // Lambda é‹ç®—å­ (ç°¡å¯«)
+    // Lambda ç¬¦è™Ÿå¾Œå¯ä»¥é‹ç®—æˆ–å¯«ç¨‹å¼
 
     /// <summary>
-    /// ¥Ø«e§Ş¯àªº¯à¤O­È
+    /// ç›®å‰æŠ€èƒ½çš„èƒ½åŠ›å€¼
     /// </summary>
     public float SkillValue => SkillValues[Lv - 1];
 }

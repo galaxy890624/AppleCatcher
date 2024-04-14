@@ -1,4 +1,4 @@
-/*using System.Collections;
+ï»¿/*using System.Collections;
 using System.Collections.Generic;*/
 using UnityEngine;
 using UnityEngine.UI;
@@ -10,20 +10,20 @@ namespace galaxy890624
     /// </summary>
     public class ControlSystem : MonoBehaviour
     {
-        [Header("²¾°Ê³t«×"), Range(0, 10)]
+        [Header("ç§»å‹•é€Ÿåº¦"), Range(0, 10)]
         public float MoveSpeed = 2.0f;
-        [Header("¥ªÃä¬É"), Tooltip("³o¬O¨¤¦â¥ªÃäªº¦ì¸m­­¨î")]
+        [Header("å·¦é‚Šç•Œ"), Tooltip("é€™æ˜¯è§’è‰²å·¦é‚Šçš„ä½ç½®é™åˆ¶")]
         public float LimitLeft = -9.5f;
-        [Header("¥kÃä¬É"), Tooltip("³o¬O¨¤¦â¥kÃäªº¦ì¸m­­¨î")]
+        [Header("å³é‚Šç•Œ"), Tooltip("é€™æ˜¯è§’è‰²å³é‚Šçš„ä½ç½®é™åˆ¶")]
         public float LimitRight = 9.5f;
-        [SerializeField] Text ¤Hª«®y¼Ğ = null;
+        [SerializeField] Text äººç‰©åº§æ¨™ = null;
 
         Vector3 InitialPosition;
         
         // Initialize
-        private void Awake() // ¹CÀ¸¶}©l®É·|°õ¦æ1¦¸
+        private void Awake() // éŠæˆ²é–‹å§‹æ™‚æœƒåŸ·è¡Œ1æ¬¡
         {
-            // ³]©w¸Ó¨¤¦âªºªì©l®y¼Ğ
+            // è¨­å®šè©²è§’è‰²çš„åˆå§‹åº§æ¨™
             InitialPosition = new Vector3(0f, -7.25f, 0f);
             transform.position = InitialPosition;
 
@@ -31,25 +31,25 @@ namespace galaxy890624
 
         // Game logic
         private void Update()
-        // §ó·s¨Æ¥ó: ¬ù1¬í«á°õ¦æ 60 FPS
-        // ¥i¥H°»´úª±®aªº¿é¤J¦æ¬°: Áä½L, ·Æ¹«, ·n±ì, Ä²±±, XR±±¨î¾¹
+        // æ›´æ–°äº‹ä»¶: ç´„1ç§’å¾ŒåŸ·è¡Œ 60 FPS
+        // å¯ä»¥åµæ¸¬ç©å®¶çš„è¼¸å…¥è¡Œç‚º: éµç›¤, æ»‘é¼ , æ–æ¡¿, è§¸æ§, XRæ§åˆ¶å™¨
         {
             Move();
         }
 
         /// <summary>
-        /// ²¾°Ê¤èªk: °»´úª±®aªº¿é¤J¨Ã±±¨î¨¤¦â²¾°Ê, ¥H¤Î½d³ò­­¨î
+        /// ç§»å‹•æ–¹æ³•: åµæ¸¬ç©å®¶çš„è¼¸å…¥ä¸¦æ§åˆ¶è§’è‰²ç§»å‹•, ä»¥åŠç¯„åœé™åˆ¶
         /// </summary>
         private void Move()
         {
-            float MoveX = Input.GetAxis("Horizontal"); // ª±®a¿é¤Jªº¤ô¥­«öÁä, ex: a, d, ¡ö, ¡÷
-            transform.Translate(MoveX * Time.deltaTime * MoveSpeed, 0, 0); // Åıª«¥ó²¾°Ê(x, y, z), ¦bupdate¸Ì­±ªí¥Ü¨C­Óframe³£°õ¦æ1¦¸
+            float MoveX = Input.GetAxis("Horizontal"); // ç©å®¶è¼¸å…¥çš„æ°´å¹³æŒ‰éµ, ex: a, d, â†, â†’
+            transform.Translate(MoveX * Time.deltaTime * MoveSpeed, 0, 0); // è®“ç‰©ä»¶ç§»å‹•(x, y, z), åœ¨updateè£¡é¢è¡¨ç¤ºæ¯å€‹frameéƒ½åŸ·è¡Œ1æ¬¡
             Vector3 Position = transform.position;
 
-            Position.x = Mathf.Clamp(Position.x, LimitLeft, LimitRight); // ²¾°Ê½d³ò
+            Position.x = Mathf.Clamp(Position.x, LimitLeft, LimitRight); // ç§»å‹•ç¯„åœ
 
             transform.position = Position;
-            ¤Hª«®y¼Ğ.text = "Position = " + Position.ToString("N3");
+            äººç‰©åº§æ¨™.text = "Position = " + Position.ToString("N3");
         }
     }
 }

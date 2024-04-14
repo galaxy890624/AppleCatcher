@@ -1,15 +1,15 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using Unity.VisualScripting.FullSerializer;
 using UnityEngine;
 using static UnityEditor.Progress;
 
-// ­I¥]¨t²Î
-// ¥Î¨Ó±±¨îItemªºÀx¦s
-// °Ñ¦ÒSkillManager.cs
+// èƒŒåŒ…ç³»çµ±
+// ç”¨ä¾†æŽ§åˆ¶Itemçš„å„²å­˜
+// åƒè€ƒSkillManager.cs
 
-//[CreateAssetMenu(fileName = "ItemManager", menuName = "Item/ItemManager")] // ¥kÁä > Chatbox > ChatboxManager
+//[CreateAssetMenu(fileName = "ItemManager", menuName = "Item/ItemManager")] // å³éµ > Chatbox > ChatboxManager
 
 public class ItemManager : MonoBehaviour
 {
@@ -17,13 +17,13 @@ public class ItemManager : MonoBehaviour
     public static ItemManager Instance;
 
     /// <summary>
-    /// ÀH¾÷§Þ¯à¸ê®Æ
+    /// éš¨æ©ŸæŠ€èƒ½è³‡æ–™
     /// </summary>
     /// Scriptable Object
     /// FruitLevel[0] Apple
     /// FruitLevel[1] Bananas
 
-    //[SerializeField, Header("¤ôªGµ¥¯ÅFruitLevel")] // ¥þ³¡¤ôªG¸ê®Æ
+    //[SerializeField, Header("æ°´æžœç­‰ç´šFruitLevel")] // å…¨éƒ¨æ°´æžœè³‡æ–™
     //private Item[] FruitLevel = null;
 
     private void Awake()

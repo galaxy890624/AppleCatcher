@@ -1,19 +1,19 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 public class FruitCatcher : MonoBehaviour
 {
     public GameObject[] FruitLevel = null;
-    public Item Item; // ­n¥ı¹ê¨Ò¤Æ¤~¯à¥Î
+    public Item Item; // è¦å…ˆå¯¦ä¾‹åŒ–æ‰èƒ½ç”¨
 
     // initialize
     private void OnEnable()
     {
-        // ½T«O Item ¤w¸g³Q¹ê¨Ò¤Æ
+        // ç¢ºä¿ Item å·²ç¶“è¢«å¯¦ä¾‹åŒ–
         if (Item == null)
         {
-            // ¹ê¨Ò¤Æ Item
+            // å¯¦ä¾‹åŒ– Item
             // Item = ScriptableObject.CreateInstance<Item>();
         }
     }
@@ -23,9 +23,9 @@ public class FruitCatcher : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            //print($"<color=#ff00ff>§Ú±µ¨ì<color=#00ff00>{gameObject.name}</color>¤F­ò!</color>");
+            //print($"<color=#ff00ff>æˆ‘æ¥åˆ°<color=#00ff00>{gameObject.name}</color>äº†å”·!</color>");
             //print($"{UnityEditor.ArrayUtility.IndexOf<GameObject>(FruitLevel, gameObject)}"); // Input = ..\Prefabs\Cherries ; Output = 2
-            // ¦Y¨ì¤ôªG ¼Æ¶q´N + 1
+            // åƒåˆ°æ°´æœ æ•¸é‡å°± + 1
             Item.ItemQuantity += 1;
 
             SaveManager.instance.Score += (UnityEditor.ArrayUtility.IndexOf<GameObject>(FruitLevel, gameObject) + 1);
@@ -33,7 +33,7 @@ public class FruitCatcher : MonoBehaviour
         }
         else if (collision.tag == "Ground")
         {
-            //print($"<color=#ff00ff><color=#00ff00>{gameObject.name}</color>±¼¦b¦a¤W¤F­ò!</color>");
+            //print($"<color=#ff00ff><color=#00ff00>{gameObject.name}</color>æ‰åœ¨åœ°ä¸Šäº†å”·!</color>");
             Destroy(gameObject);
         }
     }
