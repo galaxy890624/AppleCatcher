@@ -58,7 +58,7 @@ public class SaveManager
         }
     }
     /// <summary>
-    /// 鑰匙顯示器
+    /// 血量顯示器
     /// </summary>
     public int 血量
     {
