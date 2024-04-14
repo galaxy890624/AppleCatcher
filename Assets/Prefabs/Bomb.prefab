@@ -164,3 +164,4 @@ MonoBehaviour:
   Bomb:
   - {fileID: 2352021875271162179}
   Item: {fileID: 11400000, guid: 578803fe0c3b709449a5c737b072150b, type: 2}
+  "\u8840\u91CFUI": []
