@@ -6,6 +6,7 @@ public class BombCatcher : MonoBehaviour
 {
     public GameObject[] Bomb = null;
     public Item Item; // 要先實例化才能用
+    [SerializeField] List<GameObject> 血量UI = new List<GameObject>(); // 血量的愛心物件
 
     // initialize
     private void OnEnable()
