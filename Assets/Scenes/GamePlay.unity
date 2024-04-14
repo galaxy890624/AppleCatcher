@@ -2146,4 +2146,4 @@ MonoBehaviour:
   Bomb: []
   Item: {fileID: 11400000, guid: 578803fe0c3b709449a5c737b072150b, type: 2}
   Parent: {fileID: 1830286308}
-  HPMonitor: {fileID: 0}
+  HPMonitor: {fileID: 1830286311}
